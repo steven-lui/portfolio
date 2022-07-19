@@ -1,8 +1,15 @@
 body {
-  background: darkgray; }
+  background: white;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-size: 20px; }
 
 h1 {
-  margin: 0; }
+  margin: 0;
+  font-weight: 500; }
+
+a {
+  text-decoration: none; }
 
 #hero {
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.3)), url("../img/hero.png");
@@ -16,7 +23,7 @@ h1 {
   margin: auto; }
   #hero * {
     text-align: center;
-    color: skyblue; }
+    color: white; }
   #hero .btn {
     position: absolute;
     bottom: 0;
@@ -24,5 +31,29 @@ h1 {
     right: 0;
     margin-left: auto;
     margin-right: auto; }
+
+nav {
+  position: fixed;
+  height: 100%;
+  width: 10rem;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  background-color: rgba(255, 255, 255, 0.7); }
+
+.navbar {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  padding: 0; }
+  .navbar ul {
+    list-style: none;
+    padding: 0; }
+  .navbar a {
+    color: #26428b;
+    margin: auto; }
+    .navbar a:hover {
+      text-decoration: underline; }
 
 /*# sourceMappingURL=styles.css.map */
