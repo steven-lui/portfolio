@@ -1,0 +1,19 @@
+//COLOR
+$primary: skyblue;
+$accent: darkgray;
+$warning: red;
+
+$palettes: (
+    primary: (base: $primary,
+        light: lighten($primary, 10),
+        dark: darken($primary, 10),
+    ),
+    accent: (base: $accent,
+        light: lighten($accent, 10),
+        dark: darken($accent, 10),
+    ),
+    warning: (base: $warning,
+        light: lighten($warning, 10),
+        dark: darken($warning, 10),
+    )
+);
