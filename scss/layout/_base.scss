@@ -1,15 +1,17 @@
 body {
     background: $background;
     font-family: $font-family;
-    font-weight: 300;
-    font-size: 20px;
+    font-weight: getFontWeight(md);
+    font-size: $font-size;
+    color: $primary;
 }
 
-h1 {
+h1, h2, h3, h4, h5 {
     margin: 0;
-    font-weight: 500;
+    font-weight: getFontWeight(hy);
 }
 
 a {
     text-decoration: none;
+    color:inherit;
 }

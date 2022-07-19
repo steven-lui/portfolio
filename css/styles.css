@@ -1,15 +1,17 @@
 body {
   background: white;
   font-family: "Roboto", sans-serif;
-  font-weight: 300;
-  font-size: 20px; }
+  font-weight: 500;
+  font-size: 16px;
+  color: #26428b; }
 
-h1 {
+h1, h2, h3, h4, h5 {
   margin: 0;
-  font-weight: 500; }
+  font-weight: 700; }
 
 a {
-  text-decoration: none; }
+  text-decoration: none;
+  color: inherit; }
 
 #hero {
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.3)), url("../img/hero.png");
@@ -55,5 +57,24 @@ nav {
     margin: auto; }
     .navbar a:hover {
       text-decoration: underline; }
+
+#projects .card {
+  margin: 1rem;
+  outline: 2px rgba(0, 0, 0, 0.3);
+  transition: .5s ease;
+  top: 0; }
+  #projects .card:hover {
+    top: -.75rem; }
+  #projects .card-img-top {
+    border-radius: inherit; }
+  #projects .card-title {
+    font-size: 2rem; }
+  #projects .card-text,
+  #projects .card a {
+    font-weight: 300; }
+  #projects .card a:hover {
+    text-decoration: underline; }
+  #projects .card a i {
+    margin-left: 1rem; }
 
 /*# sourceMappingURL=styles.css.map */
