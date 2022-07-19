@@ -1,0 +1,25 @@
+#contact-me {
+    .form {
+
+        &-control,
+        #message {
+            padding: .6rem;
+            margin: .5rem 0;
+            background-color: rgba(black, .2);
+            border-radius: .5rem;
+            &::placeholder {
+                color: rgba(black, .5);
+            }
+        }
+
+        #message {
+            width: 100%;
+        }
+
+        .btn {
+            color: $primary;
+            border: 1px solid $primary;
+            width: 100%;
+        }
+    }
+}

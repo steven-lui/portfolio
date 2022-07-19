@@ -1,3 +1,7 @@
+* {
+  margin: 0;
+  padding: 0; }
+
 body {
   background: white;
   font-family: "Roboto", sans-serif;
@@ -5,8 +9,13 @@ body {
   font-size: 16px;
   color: #26428b; }
 
-h1, h2, h3, h4, h5 {
-  margin: 0;
+h1,
+h2 {
+  font-weight: 900; }
+
+h3,
+h4,
+h5 {
   font-weight: 700; }
 
 a {
@@ -76,5 +85,21 @@ nav {
     text-decoration: underline; }
   #projects .card a i {
     margin-left: 1rem; }
+
+#contact-me .form-control,
+#contact-me .form #message {
+  padding: .6rem;
+  margin: .5rem 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: .5rem; }
+  #contact-me .form-control::placeholder,
+  #contact-me .form #message::placeholder {
+    color: rgba(0, 0, 0, 0.5); }
+#contact-me .form #message {
+  width: 100%; }
+#contact-me .form .btn {
+  color: #26428b;
+  border: 1px solid #26428b;
+  width: 100%; }
 
 /*# sourceMappingURL=styles.css.map */

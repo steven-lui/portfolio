@@ -1,3 +1,8 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
 body {
     background: $background;
     font-family: $font-family;
@@ -6,12 +11,19 @@ body {
     color: $primary;
 }
 
-h1, h2, h3, h4, h5 {
-    margin: 0;
+h1,
+h2 {
+    font-weight: getFontWeight(xh);
+}
+
+h3,
+h4,
+h5 {
     font-weight: getFontWeight(hy);
 }
 
+
 a {
     text-decoration: none;
-    color:inherit;
+    color: inherit;
 }
