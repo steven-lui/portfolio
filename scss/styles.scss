@@ -2,10 +2,12 @@
 @import "utilities/functions";
 @import "utilities/mixins";
 
+@import "components/card";
+@import "components/hamburgers/hamburgers.scss";
+
 @import "layout/base";
 
 @import "layout/hero";
 @import "layout/header";
-@import "layout/projects";
 @import "layout/contact";
 @import "layout/footer";
