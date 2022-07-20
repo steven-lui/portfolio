@@ -238,4 +238,7 @@ footer #to-top .btn {
   width: 100%;
   color: #26428b; }
 
-/*# sourceMappingURL=styles.css.map */
+#introduction a {
+  border-bottom: 1px solid #26428b; }
+
+/*# sourceMappingURL=about.css.map */

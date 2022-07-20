@@ -5,11 +5,11 @@
         #message {
             padding: .6rem;
             margin: .5rem 0;
-            background-color: rgba(black, .2);
+            background-color: rgba($primary, .2);
             border-radius: .5rem;
 
             &::placeholder {
-                color: rgba(black, .5);
+                color: rgba($primary, .8);
             }
         }
 

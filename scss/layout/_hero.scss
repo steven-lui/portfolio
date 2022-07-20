@@ -11,9 +11,18 @@
     justify-content: center;
     margin: auto;
 
+    h1 {
+        font-size: 3rem;
+    }
+
+    h2 {
+        font-weight: getFontWeight(hy);
+        font-size: 1.5rem;
+    }
+
     * {
         text-align: center;
-        color: $background;
+        color: white;
     }
 
     .btn {
