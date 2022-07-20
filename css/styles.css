@@ -6,11 +6,14 @@ body {
   background: white;
   font-family: "Roboto", sans-serif;
   font-weight: 500;
-  font-size: 16px;
+  font-size: 20px;
   color: #26428b; }
 
 section {
-  padding: 1rem 0; }
+  padding: 1rem; }
+  @media only screen and (min-width: 992px) {
+    section:not([id="hero"]) {
+      padding-left: 13rem; } }
 
 h1,
 h2 {
@@ -49,29 +52,43 @@ a {
 nav {
   position: fixed;
   height: 100%;
-  width: 10rem;
+  width: 12rem;
   z-index: 1;
   top: 0;
   left: 0;
   overflow-x: hidden;
-  background-color: rgba(255, 255, 255, 0.7); }
+  background-color: rgba(255, 255, 255, 0.5);
+  border-right: 1px solid #26428b; }
 
 .navbar {
   display: flex;
   text-align: center;
   justify-content: center;
   padding: 0; }
-  .navbar ul {
-    list-style: none;
-    padding: 0; }
   .navbar a {
     color: #26428b;
-    margin: auto; }
+    border-bottom: 1px solid transparent;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; }
     .navbar a:hover {
-      text-decoration: underline; }
+      border-bottom: 1px solid #26428b; }
+  .navbar-brand {
+    border-bottom: 1px solid #26428b !important; }
+  .navbar ul {
+    list-style: none;
+    margin: 1rem 0;
+    padding: 0; }
+  .navbar hr {
+    padding: 0;
+    margin: 0;
+    color: #26428b;
+    opacity: 1; }
+  .navbar .socials {
+    font-size: 1.5em; }
 
 #projects .card {
-  margin: 1rem;
+  margin: 1rem 0;
   outline: 2px rgba(0, 0, 0, 0.3);
   transition: .5s ease;
   top: 0; }
@@ -84,10 +101,12 @@ nav {
   #projects .card-text,
   #projects .card a {
     font-weight: 300; }
-  #projects .card a:hover {
-    text-decoration: underline; }
-  #projects .card a i {
-    margin-left: 1rem; }
+  #projects .card a {
+    border-bottom: 1px solid transparent; }
+    #projects .card a:hover {
+      border-bottom: 1px solid #26428b; }
+    #projects .card a i {
+      margin-left: 1rem; }
 
 #contact-me .form-control,
 #contact-me .form #message {

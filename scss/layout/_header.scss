@@ -1,12 +1,14 @@
 nav {
+   // @include debug;
     position: fixed;
     height: 100%;
-    width: 10rem;
+    width: $nav-width;
     z-index: 1;
     top: 0;
     left: 0;
     overflow-x: hidden;
-    background-color: rgba($background, 0.7);
+    background-color: rgba($background, 0.5);
+    border-right: $primary-border;
 }
 
 .navbar {
@@ -15,16 +17,32 @@ nav {
     justify-content: center;
     padding: 0;
 
+    a {
+        color: $primary;
+        @include underline-hover($primary);
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    &-brand {
+        border-bottom: $primary-border  !important;
+    }
+
     ul {
         list-style: none;
+        margin: 1rem 0;
         padding: 0;
     }
 
-    a {
+    hr {
+        padding: 0;
+        margin: 0;
         color: $primary;
-        margin: auto;
-        &:hover {
-            text-decoration: underline;
-        }
+        opacity: 1;
+    }
+
+    .socials {
+        font-size: 1.5em;
     }
 }

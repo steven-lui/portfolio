@@ -7,6 +7,7 @@
             margin: .5rem 0;
             background-color: rgba(black, .2);
             border-radius: .5rem;
+
             &::placeholder {
                 color: rgba(black, .5);
             }
@@ -20,6 +21,7 @@
             color: $primary;
             border: 1px solid $primary;
             width: 100%;
+
             &:hover {
                 color: $background;
                 background-color: $primary;

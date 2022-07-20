@@ -12,7 +12,13 @@ body {
 }
 
 section {
-    padding: 1rem 0;
+    padding: 1rem;
+
+    @media only screen and (min-width:map-get($grid-breakpoints, lg)) {
+        &:not([id="hero"]) {
+            padding-left: 1rem + $nav-width;
+        }
+    }
 }
 
 h1,

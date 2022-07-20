@@ -5,10 +5,26 @@ $background: white;
 
 //FONT
 $font-family: 'Roboto', sans-serif;
-$font-size: 16px;
+$font-size: 20px;
 $font-weight: (
     lt:300,
     md:500,
     hy:700,
     xh:900,
 );
+
+//BREAKPOINTS
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px
+);
+
+//MEASUREMENTS
+$nav-width:12rem;
+
+//BORDER
+$primary-border: 1px solid $primary;

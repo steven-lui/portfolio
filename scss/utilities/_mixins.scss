@@ -1,0 +1,14 @@
+@mixin debug {
+    * {
+        outline: 1px solid green;
+    }
+    
+    @content;
+}
+
+@mixin underline-hover($color) {
+    border-bottom: 1px solid transparent;
+    &:hover {
+        border-bottom: 1px solid $color;
+    }
+}

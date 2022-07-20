@@ -33,21 +33,25 @@
 
 <body>
     <header>
-        <nav class="d-none">
+        <nav class="d-none d-lg-block">
             <div class="navbar">
                 <a href="#" class="navbar-brand"><img class="img-fluid" src="img/logo.png" alt="Logo"></a>
                 <div class="navbar-nav">
                     <ul>
-                        <li><a href="#" class="nav-item">About Me</a></li>
-                        <li><a href="#" class="nav-item">My Portfolio</a></li>
-                        <li><a href="#" class="nav-item">Coding Examples</a></li>
-                        <li><a href="#" class="nav-item">SCS Scheme</a></li>
+                        <li><a href="about.html" class="nav-item">About Me</a></li>
+                        <li><a href="portfolio.html" class="nav-item">My Portfolio</a></li>
+                        <li><a href="examples.html" class="nav-item">Coding Examples</a></li>
+                        <li><a href="scs.html" class="nav-item">SCS Scheme</a></li>
                     </ul>
-
+                    <hr>
                     <a href="#contact-me" class="nav-item">Contact Me</a>
-                    <ul>
-                        <li><a class="nav-item" href="https://www.linkedin.com/in/steven-lui-332965245"><i
-                                    class="fa-brands fa-linkedin"></i></a></li>
+                    <hr>
+                    <ul class="socials">
+                        <li>
+                            <a class="nav-item" href="https://www.linkedin.com/in/steven-lui-332965245">
+                                <i class="fa-brands fa-linkedin"></i>
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -75,36 +79,38 @@
 
         <section id="projects">
             <div class="container">
-                <div class="row">
-                    <div class="col-12">
+                <div class="row justify-content-center">
+                    <div class="col-12 col-lg-6">
                         <div class="card">
                             <img src="img/placeholder.png" class="card-img-top">
                             <div class="card-body">
                                 <h5 class="card-title">Project 1</h5>
                                 <p class="card-text">Project 1 text</p>
-                                <a href="#">View Project<i class="fa-solid fa-arrow-right"></i></a>
+                                <a href="#" class="stretched-link">View Project<i
+                                        class="fa-solid fa-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>
 
-                    <div class="col-12">
+                    <div class="col-12 col-lg-6">
                         <div class="card">
                             <img src="img/placeholder.png" class="card-img-top">
                             <div class="card-body">
                                 <h5 class="card-title">Project 2</h5>
                                 <p class="card-text">Project 2 text</p>
-                                <a href="#">View Project<i class="fa-solid fa-arrow-right"></i></a>
+                                <a href="#" class="stretched-link">View Project<i
+                                        class="fa-solid fa-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>
-
-                    <div class="col-12">
+                    <div class="col-6">
                         <div class="card">
                             <img src="img/placeholder.png" class="card-img-top">
                             <div class="card-body">
                                 <h5 class="card-title">Project 3</h5>
                                 <p class="card-text">Project 3 text</p>
-                                <a href="#">View Project<i class="fa-solid fa-arrow-right"></i></a>
+                                <a href="#" class="stretched-link">View Project<i
+                                        class="fa-solid fa-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>
@@ -114,47 +120,55 @@
 
         <section id="contact-me">
             <div class="container">
-                <h2>Get In Touch</h2>
-                <p>Fruitcake biscuit liquorice sugar plum pudding apple pie. Gummies pudding cookie jujubes candy jelly
-                    beans halvah. Danish fruitcake fruitcake carrot cake liquorice marshmallow soufflé sesame snaps
-                    apple pie.</p>
-                <h3>
-                    Phone Number
-                </h3>
-                <h4>
-                    Email Address
-                </h4>
-                <p>
-                    Sweet roll cookie shortbread gummies sugar plum. Chocolate cake soufflé icing marshmallow oat cake
-                    tiramisu. Jelly beans caramels cake jujubes sweet cake donut cookie. Jelly donut jelly biscuit wafer
-                    marshmallow muffin.
-                </p>
-
-
-                <form class="form">
-                    <div class="row">
-                        <div class="col-12">
-                            <input type="text" class="form-control" id="fname" placeholder="First Name*">
-                        </div>
-                        <div class="col-12">
-                            <input type="text" class="form-control" id="sname" placeholder="Last Name*">
-                        </div>
-                        <div class="col-12">
-                            <input type="text" class="form-control" id="email" placeholder="Email Address*">
-                        </div>
-                        <div class="col-12">
-                            <input type="text" class="form-control" id="subject" placeholder="Subject">
-                        </div>
-                        <div class="col-12">
-                            <textarea name="message" id="message" rows="10" placeholder="Message"></textarea>
-                        </div>
-                        <div class="col-12">
-                            <button type="submit" class="btn">Submit</button>
-                        </div>
+                <div class="row">
+                    <div class="col-12 col-lg-4">
+                        <h2>Get In Touch</h2>
+                        <p>Fruitcake biscuit liquorice sugar plum pudding apple pie. Gummies pudding cookie jujubes
+                            candy jelly
+                            beans halvah. Danish fruitcake fruitcake carrot cake liquorice marshmallow soufflé sesame
+                            snaps
+                            apple pie.</p>
+                        <h3>
+                            Phone Number
+                        </h3>
+                        <h4>
+                            Email Address
+                        </h4>
+                        <p>
+                            Sweet roll cookie shortbread gummies sugar plum. Chocolate cake soufflé icing marshmallow
+                            oat cake
+                            tiramisu. Jelly beans caramels cake jujubes sweet cake donut cookie. Jelly donut jelly
+                            biscuit wafer
+                            marshmallow muffin.
+                        </p>
                     </div>
-                </form>
-            </div>
 
+                    <div class="col">
+                        <form class="form">
+                            <div class="row">
+                                <div class="col-12 col-lg-6">
+                                    <input type="text" class="form-control" id="fname" placeholder="First Name*">
+                                </div>
+                                <div class="col-12 col-lg-6">
+                                    <input type="text" class="form-control" id="sname" placeholder="Last Name*">
+                                </div>
+                                <div class="col-12">
+                                    <input type="text" class="form-control" id="email" placeholder="Email Address*">
+                                </div>
+                                <div class="col-12">
+                                    <input type="text" class="form-control" id="subject" placeholder="Subject">
+                                </div>
+                                <div class="col-12">
+                                    <textarea name="message" id="message" rows="10" placeholder="Message"></textarea>
+                                </div>
+                                <div class="col-12 col-lg-3">
+                                    <button type="submit" class="btn">Submit</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
 
