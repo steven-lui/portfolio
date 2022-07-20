@@ -20,6 +20,10 @@
             color: $primary;
             border: 1px solid $primary;
             width: 100%;
+            &:hover {
+                color: $background;
+                background-color: $primary;
+            }
         }
     }
 }

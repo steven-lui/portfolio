@@ -11,6 +11,10 @@ body {
     color: $primary;
 }
 
+section {
+    padding: 1rem 0;
+}
+
 h1,
 h2 {
     font-weight: getFontWeight(xh);

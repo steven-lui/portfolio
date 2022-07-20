@@ -9,6 +9,9 @@ body {
   font-size: 16px;
   color: #26428b; }
 
+section {
+  padding: 1rem 0; }
+
 h1,
 h2 {
   font-weight: 900; }
@@ -101,5 +104,12 @@ nav {
   color: #26428b;
   border: 1px solid #26428b;
   width: 100%; }
+  #contact-me .form .btn:hover {
+    color: white;
+    background-color: #26428b; }
+
+footer #to-top .btn {
+  width: 100%;
+  color: #26428b; }
 
 /*# sourceMappingURL=styles.css.map */
