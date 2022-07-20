@@ -28,7 +28,8 @@ $burger-width: $nav-width/3;
 $h-width:40px;
 $h-height:5px;
 $h-spacing:6px;
+$b-thickness:1px;
 
 
 //BORDER
-$primary-border: 1px solid $primary;
+$primary-border: $b-thickness solid $primary;

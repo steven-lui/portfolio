@@ -100,6 +100,65 @@
     transform: rotate(-90deg);
     transition: bottom 0.1s ease-out, transform 0.22s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1); }
 
+/*!
+ * Hover.css (http://ianlunn.github.io/Hover/)
+ * Version: 2.3.2
+ * Author: Ian Lunn @IanLunn
+ * Author URL: http://ianlunn.co.uk/
+ * Github: https://github.com/IanLunn/Hover
+
+ * Hover.css Copyright Ian Lunn 2017. Generated with Sass.
+ */
+/* Underline From Left */
+.hvr-underline-from-left {
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  overflow: hidden; }
+  .hvr-underline-from-left:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    right: 100%;
+    bottom: -1px;
+    background: #26428b;
+    height: 1px;
+    -webkit-transition-property: right;
+    transition-property: right;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out; }
+  .hvr-underline-from-left:hover:before, .hvr-underline-from-left:focus:before, .hvr-underline-from-left:active:before {
+    right: 0; }
+
+/* Overline From Right */
+.hvr-overline-from-right {
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  overflow: hidden; }
+  .hvr-overline-from-right:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 100%;
+    right: 0;
+    top: 0;
+    background: #26428b;
+    height: 1px;
+    -webkit-transition-property: left;
+    transition-property: left;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out; }
+  .hvr-overline-from-right:hover:before, .hvr-overline-from-right:focus:before, .hvr-overline-from-right:active:before {
+    left: 0; }
+
 * {
   margin: 0;
   padding: 0; }
@@ -131,6 +190,8 @@ h5 {
 a {
   text-decoration: none;
   color: inherit; }
+  a:hover {
+    color: inherit; }
 
 #hero {
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.3)), url("../img/hero.png");
@@ -237,5 +298,13 @@ header .navbar {
 footer #to-top .btn {
   width: 100%;
   color: #26428b; }
+
+#scs a, #treehouse a, #netmatters a {
+  border-bottom: 1px solid transparent;
+  border-bottom: 1px solid #26428b; }
+  #scs a:hover, #treehouse a:hover, #netmatters a:hover {
+    border-bottom: 1px solid #26428b; }
+  #scs a:hover, #treehouse a:hover, #netmatters a:hover {
+    border-bottom: 1px solid transparent; }
 
 /*# sourceMappingURL=scs.css.map */

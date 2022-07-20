@@ -1,0 +1,27 @@
+/*!
+ * Hover.css (http://ianlunn.github.io/Hover/)
+ * Version: 2.3.2
+ * Author: Ian Lunn @IanLunn
+ * Author URL: http://ianlunn.co.uk/
+ * Github: https://github.com/IanLunn/Hover
+
+ * Hover.css Copyright Ian Lunn 2017. Generated with Sass.
+ */
+
+@import "options";
+@import "mixins";
+@import "hacks";
+
+@import "effects/border-transitions/underline-from-left";
+@if $includeClasses {
+	.#{$nameSpace}-underline-from-left {
+		@include underline-from-left();
+	}
+}
+
+@import "effects/border-transitions/overline-from-right";
+@if $includeClasses {
+	.#{$nameSpace}-overline-from-right {
+		@include overline-from-right();
+	}
+}

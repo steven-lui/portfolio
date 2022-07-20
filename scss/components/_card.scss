@@ -23,7 +23,7 @@
     }
 
     a {
-        @include underline-hover($primary);
+        @include hover-underline;
 
         i {
             margin-left: 1rem;

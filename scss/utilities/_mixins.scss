@@ -1,14 +1,29 @@
 @mixin debug {
     * {
-        outline: 1px solid green;
+        outline: $b-thickness solid red;
+        background-color: rgba(red, 0.1);
     }
-    
+
     @content;
 }
 
-@mixin underline-hover($color) {
-    border-bottom: 1px solid transparent;
+@mixin hover-underline {
+    border-bottom: $b-thickness solid transparent;
+
     &:hover {
-        border-bottom: 1px solid $color;
+        border-bottom: $primary-border;
     }
+
+    @content;
+}
+
+@mixin always-underline {
+    @include hover-underline;
+    border-bottom: $primary-border;
+
+    &:hover {
+        border-bottom: $b-thickness solid transparent;
+    }
+
+    @content;
 }
