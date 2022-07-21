@@ -33,14 +33,22 @@ header {
         }
     }
 
-    nav {
+    nav,
+    #sidebar {
         width: $nav-width;
+        border-right: $primary-border;
+        overflow-x: hidden;
+    }
+    
+    #sidebar {
+        background-color: $background;
+    }
+
+    nav {
         height: 100%;
         top: 0;
         left: 0;
-        overflow-x: hidden;
-        background-color: rgba($background, 0.5);
-        border-right: $primary-border;
+        background-color: rgba($background, 0.6);
     }
 
     .navbar {

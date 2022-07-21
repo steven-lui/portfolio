@@ -38,11 +38,40 @@
     <header>
         <div class="container d-lg-none">
             <div class="burger">
-                <button class="hamburger hamburger--spin" type="button">
+                <button class="btn hamburger hamburger--spin" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#sidebar">
                     <span class="hamburger-box">
                         <span class="hamburger-inner"></span>
                     </span>
                 </button>
+            </div>
+
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="sidebar">
+                <div class="offcanvas-body">
+                    <div class="navbar">
+                        <a href="index.html" class="navbar-brand"><img class="img-fluid" src="img/logo.png"
+                                alt="Logo"></a>
+                        <div class="navbar-nav">
+                            <ul>
+                                <li><a href="about.html" class="nav-item">About Me</a></li>
+                                <li><a href="index.html#portfolio" class="nav-item">My Portfolio</a></li>
+                                <li><a href="examples.html" class="nav-item">Coding Examples</a></li>
+                                <li><a href="scs.html" class="nav-item">SCS Scheme</a></li>
+                            </ul>
+                            <hr>
+                            <a href="index.html#contact-me" class="nav-item">Contact Me</a>
+                            <hr>
+                            <ul class="socials">
+                                <li>
+                                    <a class="nav-item" href="https://www.linkedin.com/in/steven-lui-332965245"
+                                        target="_blank" rel="noopener noreferrer">
+                                        <i class="fa-brands fa-linkedin"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -55,7 +84,7 @@
                         <li><a href="about.html" class="nav-item">About Me</a></li>
                         <li><a href="index.html#portfolio" class="nav-item">My Portfolio</a></li>
                         <li><a href="examples.html" class="nav-item">Coding Examples</a></li>
-                        <li><a href="#" class="nav-item">SCS Scheme</a></li>
+                        <li><a href="scs.html" class="nav-item">SCS Scheme</a></li>
                     </ul>
                     <hr>
                     <a href="index.html#contact-me" class="nav-item">Contact Me</a>
