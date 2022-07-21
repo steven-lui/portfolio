@@ -57,123 +57,6 @@
   .hvr-overline-from-right:hover:before, .hvr-overline-from-right:focus:before, .hvr-overline-from-right:active:before {
     left: 0; }
 
-html {
-  font-family: "Roboto", sans-serif;
-  font-weight: 500;
-  font-size: 20px; }
-
-body {
-  background: white;
-  color: #26428b; }
-
-section, #to-top {
-  padding: 1rem; }
-  @media only screen and (min-width: 992px) {
-    section:not(#hero), #to-top:not(#hero) {
-      padding-left: 11rem; } }
-
-h1,
-h2 {
-  font-weight: 900; }
-
-h3,
-h4,
-h5 {
-  font-weight: 700; }
-
-a {
-  text-decoration: none;
-  color: inherit; }
-  a:hover {
-    color: inherit; }
-
-header nav,
-header .burger {
-  position: fixed;
-  z-index: 10000; }
-header .burger {
-  top: 1rem;
-  left: 1rem;
-  width: 3.3333333333rem;
-  height: 3.3333333333rem; }
-  header .burger,
-  header .burger .hamburger {
-    border-radius: 50%; }
-  header .burger .hamburger {
-    display: flex;
-    width: 100%;
-    height: 100%;
-    align-items: center;
-    justify-content: center;
-    background-color: #26428b;
-    filter: opacity(40%); }
-    header .burger .hamburger:hover {
-      filter: opacity(80%); }
-header nav {
-  width: 10rem;
-  height: 100%;
-  top: 0;
-  left: 0;
-  overflow-x: hidden;
-  background-color: rgba(255, 255, 255, 0.5);
-  border-right: 1px solid #26428b; }
-header .navbar {
-  display: flex;
-  text-align: center;
-  justify-content: center;
-  padding: 0; }
-  header .navbar a {
-    color: #26428b;
-    border-bottom: 1px solid transparent;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box; }
-    header .navbar a:hover {
-      border-bottom: 1px solid #26428b; }
-  header .navbar-brand {
-    border-bottom: 1px solid #26428b !important; }
-  header .navbar ul {
-    list-style: none;
-    margin: 1rem 0;
-    padding: 0; }
-  header .navbar hr {
-    padding: 0;
-    margin: 0;
-    color: #26428b;
-    opacity: 1; }
-  header .navbar .socials {
-    font-size: 1.5em; }
-
-footer #to-top .btn {
-  width: 100%;
-  color: #26428b; }
-
-.card {
-  margin: 1rem 0;
-  outline: 1px solid #26428b;
-  transition: .5s ease;
-  top: 0; }
-  .card:hover {
-    top: -.75rem; }
-  .card-img-top {
-    height: 20rem;
-    object-fit: contain; }
-  .card-title {
-    font-size: 2rem;
-    border-top: 1px solid #26428b; }
-  .card-text,
-  .card a {
-    font-weight: 300; }
-  .card-text {
-    font-size: smaller;
-    height: 3rem; }
-  .card a {
-    border-bottom: 1px solid transparent; }
-    .card a:hover {
-      border-bottom: 1px solid #26428b; }
-    .card a i {
-      margin-left: .5rem; }
-
 /*!
  * Hamburgers
  * @description Tasty CSS-animated hamburgers
@@ -254,6 +137,127 @@ footer #to-top .btn {
     bottom: 0;
     transform: rotate(-90deg);
     transition: bottom 0.1s ease-out, transform 0.22s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1); }
+
+html {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 20px; }
+
+body {
+  background: white;
+  color: #26428b; }
+
+section, #to-top {
+  padding: 1rem; }
+  @media only screen and (min-width: 992px) {
+    section:not(#hero), #to-top:not(#hero) {
+      padding-left: 11rem; } }
+
+h1,
+h2 {
+  font-weight: 900; }
+
+h3,
+h4,
+h5 {
+  font-weight: 700; }
+
+a {
+  text-decoration: none;
+  color: inherit; }
+  a:hover {
+    color: inherit; }
+
+header nav,
+header .burger {
+  position: fixed;
+  z-index: 10000; }
+header .burger {
+  top: 1rem;
+  left: 1rem;
+  width: 3.3333333333rem;
+  height: 3.3333333333rem; }
+  header .burger,
+  header .burger .hamburger {
+    border-radius: 50%; }
+  header .burger .hamburger {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    background-color: #26428b;
+    filter: opacity(40%); }
+    header .burger .hamburger:hover {
+      filter: opacity(80%); }
+header nav,
+header #sidebar {
+  width: 10rem;
+  border-right: 1px solid #26428b;
+  overflow-x: hidden; }
+header #sidebar {
+  background-color: white; }
+header nav {
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.6); }
+header .navbar {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  padding: 0; }
+  header .navbar a {
+    color: #26428b;
+    border-bottom: 1px solid transparent;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; }
+    header .navbar a:hover {
+      border-bottom: 1px solid #26428b; }
+  header .navbar-brand {
+    border-bottom: 1px solid #26428b !important; }
+  header .navbar ul {
+    list-style: none;
+    margin: 1rem 0;
+    padding: 0; }
+  header .navbar hr {
+    padding: 0;
+    margin: 0;
+    color: #26428b;
+    opacity: 1; }
+  header .navbar .socials {
+    font-size: 1.5em; }
+
+footer #to-top .btn {
+  width: 100%;
+  color: #26428b; }
+
+.card {
+  margin: 1rem 0;
+  outline: 1px solid #26428b;
+  transition: .5s ease;
+  top: 0; }
+  .card:hover {
+    top: -.75rem; }
+  .card-img-top {
+    height: 20rem;
+    object-fit: contain; }
+  .card-title {
+    font-size: 2rem;
+    border-top: 1px solid #26428b; }
+  .card-text,
+  .card a {
+    font-weight: 300; }
+  .card-text {
+    font-size: smaller;
+    height: 3rem; }
+  .card a {
+    border-bottom: 1px solid transparent; }
+    .card a:hover {
+      border-bottom: 1px solid #26428b; }
+    .card a i {
+      margin-left: .5rem; }
 
 #hero {
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.3)), url("../../img/hero.jpg");
