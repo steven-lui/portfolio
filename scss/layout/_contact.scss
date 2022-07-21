@@ -5,16 +5,22 @@
         #message {
             padding: .6rem;
             margin: .5rem 0;
-            background-color: rgba($primary, .2);
+            background-color: inherit;
             border-radius: .5rem;
+            border:none;
+            outline: $primary-border;
+            color: $primary;
 
             &::placeholder {
-                color: rgba($primary, .8);
+                color: rgba($primary, .5);
             }
         }
 
         #message {
             width: 100%;
+            &::placeholder {
+                opacity: 1;
+            }
         }
 
         .btn {

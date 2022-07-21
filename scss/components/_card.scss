@@ -1,7 +1,6 @@
 .card {
-    $outline: 2px rgba(black, 0.3);
     margin: 1rem 0;
-    outline: $outline;
+    outline: $primary-border;
     transition: .5s ease;
     top: 0;
 
@@ -10,11 +9,13 @@
     }
 
     &-img-top {
-        border-radius: inherit;
+        height: 20rem;
+        object-fit: contain;
     }
 
     &-title {
         font-size: 2rem;
+        border-top: $primary-border;
     }
 
     &-text,
@@ -22,11 +23,16 @@
         font-weight: getFontWeight(lt);
     }
 
+    &-text {
+        font-size: smaller;
+        height: 3rem;
+    }
+
     a {
         @include hover-underline;
 
         i {
-            margin-left: 1rem;
+            margin-left: .5rem;
         }
     }
 }
