@@ -147,10 +147,12 @@ body {
   background: white;
   color: #26428b; }
 
-section, #to-top {
+section,
+#to-top {
   padding: 1rem; }
-  @media only screen and (min-width: 992px) {
-    section:not(#hero), #to-top:not(#hero) {
+  @media (min-width: 992px) {
+    section,
+    #to-top {
       padding-left: 11rem; } }
 
 h1,

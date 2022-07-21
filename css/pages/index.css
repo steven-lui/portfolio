@@ -147,10 +147,12 @@ body {
   background: white;
   color: #26428b; }
 
-section, #to-top {
+section,
+#to-top {
   padding: 1rem; }
-  @media only screen and (min-width: 992px) {
-    section:not(#hero), #to-top:not(#hero) {
+  @media (min-width: 992px) {
+    section,
+    #to-top {
       padding-left: 11rem; } }
 
 h1,
@@ -259,31 +261,53 @@ footer #to-top .btn {
     .card a i {
       margin-left: .5rem; }
 
+.typewriter {
+  font-family: 'Roboto Mono', monospace;
+  position: relative;
+  overflow: hidden; }
+  @media (min-width: 992px) {
+    .typewriter {
+      width: max-content; }
+      .typewriter::before, .typewriter::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0; }
+      .typewriter::before {
+        background-color: white;
+        animation: typewriter 2s steps(21, end) forwards; } }
+@keyframes typewriter {
+  to {
+    left: 100%; } }
 #hero {
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.3)), url("../../img/hero.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin: auto; }
+  padding: 0; }
+  #hero * {
+    color: white; }
+  #hero .container-fluid {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; }
+  #hero h1,
+  #hero h2 {
+    margin-left: auto;
+    margin-right: auto;
+    width: max-content; }
   #hero h1 {
     font-size: 3rem; }
   #hero h2 {
     font-weight: 700;
-    font-size: 1.5rem; }
-  #hero * {
-    text-align: center;
-    color: white; }
-  #hero .btn {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin-left: auto;
-    margin-right: auto; }
+    font-size: 2rem; }
+  @media (min-width: 992px) {
+    #hero a {
+      margin-left: 10rem; } }
 
 #contact-me .form-control,
 #contact-me .form #message {

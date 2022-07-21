@@ -9,13 +9,12 @@ body {
     color: $primary;
 }
 
-section, #to-top {
+section,
+#to-top {
     padding: 1rem;
 
-    @media only screen and (min-width:map-get($grid-breakpoints, lg)) {
-        &:not(#hero) {
-            padding-left: 1rem + $nav-width;
-        }
+    @include media-breakpoint-up(lg) {
+        padding-left: 1rem + $nav-width;
     }
 }
 
@@ -34,6 +33,7 @@ h5 {
 a {
     text-decoration: none;
     color: inherit;
+
     &:hover {
         color: inherit;
     }
