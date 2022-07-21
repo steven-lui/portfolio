@@ -1,0 +1,38 @@
+.card {
+    margin: 1rem 0;
+    outline: $primary-border;
+    transition: .5s ease;
+    top: 0;
+
+    &:hover {
+        top: -.75rem;
+    }
+
+    &-img-top {
+        height: 20rem;
+        object-fit: contain;
+    }
+
+    &-title {
+        font-size: 2rem;
+        border-top: $primary-border;
+    }
+
+    &-text,
+    a {
+        font-weight: getFontWeight(lt);
+    }
+
+    &-text {
+        font-size: smaller;
+        height: 3rem;
+    }
+
+    a {
+        @include hover-underline;
+
+        i {
+            margin-left: .5rem;
+        }
+    }
+}

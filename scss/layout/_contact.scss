@@ -1,0 +1,37 @@
+#contact-me {
+    .form {
+
+        &-control,
+        #message {
+            padding: .6rem;
+            margin: .5rem 0;
+            background-color: inherit;
+            border-radius: .5rem;
+            border:none;
+            outline: $primary-border;
+            color: $primary;
+
+            &::placeholder {
+                color: rgba($primary, .5);
+            }
+        }
+
+        #message {
+            width: 100%;
+            &::placeholder {
+                opacity: 1;
+            }
+        }
+
+        .btn {
+            color: $primary;
+            border: 1px solid $primary;
+            width: 100%;
+
+            &:hover {
+                color: $background;
+                background-color: $primary;
+            }
+        }
+    }
+}

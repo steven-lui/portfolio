@@ -1,5 +1,9 @@
 @import "utilities/variables";
+@import "utilities/functions";
+@import "utilities/mixins";
+
+@import "components/hover/hover";
 
 @import "layout/base";
-
-@import "layout/hero";
+@import "layout/header";
+@import "layout/footer";

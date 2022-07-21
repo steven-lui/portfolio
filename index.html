@@ -10,7 +10,7 @@
     <title>Steven Lui &mid; Web Developer</title>
 
     <!-- BOOTSTRAP -->
-    <link rel="stylesheet" href="bootstrap-5.2.0-beta1-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-5.2.0/bootstrap.css">
     <script src="bootstrap-5.2.0-beta1-dist/js/bootstrap.min.js"></script>
 
     <!-- SLIM JQUERY -->
@@ -22,31 +22,173 @@
     <!-- FONTAWESOME -->
     <script src="https://kit.fontawesome.com/df396576ab.js" crossorigin="anonymous"></script>
 
+    <!-- GOOGLE FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700;900&display=swap" rel="stylesheet">
+
+    <!-- JONSUH HAMBURGERS -->
+    <link href="css/hamburgers.css" rel="stylesheet">
+
     <!-- CUSTOM -->
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/pages/index.css">
 </head>
 
 <body>
-    <header></header>
+    <header>
+        <div class="container d-lg-none">
+            <div class="burger">
+                <button class="hamburger hamburger--spin" type="button">
+                    <span class="hamburger-box">
+                        <span class="hamburger-inner"></span>
+                    </span>
+                </button>
+            </div>
+        </div>
+
+
+        <nav class="d-none d-lg-block">
+            <div class="navbar">
+                <a href="#" class="navbar-brand"><img class="img-fluid" src="img/logo.png" alt="Logo"></a>
+                <div class="navbar-nav">
+                    <ul>
+                        <li><a href="about.html" class="nav-item">About Me</a></li>
+                        <li><a href="#portfolio" class="nav-item">My Portfolio</a></li>
+                        <li><a href="examples.html" class="nav-item">Coding Examples</a></li>
+                        <li><a href="scs.html" class="nav-item">SCS Scheme</a></li>
+                    </ul>
+                    <hr>
+                    <a href="#contact-me" class="nav-item">Contact Me</a>
+                    <hr>
+                    <ul class="socials">
+                        <li>
+                            <a class="nav-item" href="https://www.linkedin.com/in/steven-lui-332965245" target="_blank"
+                                rel="noopener noreferrer">
+                                <i class="fa-brands fa-linkedin"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
 
     <main>
         <section id="hero">
-            <div class="container">
-                <h1 class="display-1">My Name is Steven Lui</h1>
-                <br>
-                <p class="display-6">I'm a Web Developer</p>
+            <div class="container-fluid">
+                <h1>My Name is Steven Lui</h1>
+                <h2>I'm a Web Developer</h2>
             </div>
-            <div class="btn">
-                <p class="display-6">
-                    Work in Progress
-                    <br>
-                    <i class="fa-solid fa-angle-down"></i>
-                </p>
+            <div class="container">
+                <a href="#portfolio" class="btn">
+                    <p>
+                        Work in Progress
+                        <br>
+                        <i class="fa-solid fa-angle-down"></i>
+                    </p>
+                </a>
+            </div>
+
+        </section>
+
+        <section id="portfolio">
+            <div class="container-fluid">
+                <div class="row justify-content-center">
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card">
+                            <img src="img/placeholder.png" class="card-img-top" alt="Placeholder">
+                            <div class="card-body">
+                                <h5 class="card-title">Project 1</h5>
+                                <p class="card-text">Project 1 text</p>
+                                <a href="#" class="stretched-link">View Project<i
+                                        class="fa-solid fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card">
+                            <img src="img/thumbnails/portfolio-2022-07-21-10_05_56.png" class="card-img-top"
+                                alt="Portfolio">
+                            <div class="card-body">
+                                <h5 class="card-title">Portfolio</h5>
+                                <p class="card-text">Yes, even this site! I'm doing as much as I can to make this site
+                                    accessible to all, whilst showcasing my skills.</p>
+                                <a href="#" class="stretched-link">View Project<i
+                                        class="fa-solid fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card">
+                            <img src="img/placeholder.png" class="card-img-top" alt="Placeholder">
+                            <div class="card-body">
+                                <h5 class="card-title">Project 3</h5>
+                                <p class="card-text">Project 3 text</p>
+                                <a href="#" class="stretched-link">View Project<i
+                                        class="fa-solid fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact-me">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12 col-lg-4">
+                        <h2>Get In Touch</h2>
+                        <p>Fruitcake biscuit liquorice sugar plum pudding apple pie. Gummies pudding cookie jujubes
+                            candy jelly beans halvah. Danish fruitcake fruitcake carrot cake liquorice marshmallow
+                            soufflé sesame snaps apple pie.</p>
+                        <h3>Phone Number</h3>
+                        <h3>Email Address</h3>
+                        <p>Sweet roll cookie shortbread gummies sugar plum. Chocolate cake soufflé icing marshmallow oat
+                            cake tiramisu. Jelly beans caramels cake jujubes sweet cake donut cookie. Jelly donut jelly
+                            biscuit wafer marshmallow muffin.</p>
+                    </div>
+
+                    <div class="col">
+                        <form class="form">
+                            <div class="row">
+                                <div class="col-12 col-lg-6">
+                                    <input type="text" class="form-control" id="fname" placeholder="First Name*">
+                                </div>
+                                <div class="col-12 col-lg-6">
+                                    <input type="text" class="form-control" id="sname" placeholder="Last Name*">
+                                </div>
+                                <div class="col-12">
+                                    <input type="text" class="form-control" id="email" placeholder="Email Address*">
+                                </div>
+                                <div class="col-12">
+                                    <input type="text" class="form-control" id="subject" placeholder="Subject">
+                                </div>
+                                <div class="col-12">
+                                    <textarea name="message" id="message" rows="10" placeholder="Message"></textarea>
+                                </div>
+                                <div class="col-12 col-lg-3">
+                                    <button type="submit" class="btn">Out of Order</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
 
-    <footer></footer>
+    <footer>
+        <div id="to-top">
+            <div class="container-fluid">
+                <a href="#" class="btn">
+                    <i class="fa-solid fa-angle-up"></i>
+                    <br>
+                    Back To Top
+                </a>
+            </div>
+        </div>
+    </footer>
 </body>
 
 </html>

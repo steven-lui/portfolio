@@ -1,0 +1,29 @@
+@mixin debug {
+    * {
+        outline: $b-thickness solid red;
+        background-color: rgba(red, 0.1);
+    }
+
+    @content;
+}
+
+@mixin hover-underline {
+    border-bottom: $b-thickness solid transparent;
+
+    &:hover {
+        border-bottom: $primary-border;
+    }
+
+    @content;
+}
+
+@mixin always-underline {
+    @include hover-underline;
+    border-bottom: $primary-border;
+
+    &:hover {
+        border-bottom: $b-thickness solid transparent;
+    }
+
+    @content;
+}

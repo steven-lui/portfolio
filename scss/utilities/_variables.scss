@@ -1,19 +1,35 @@
 //COLOR
-$primary: skyblue;
-$accent: darkgray;
-$warning: red;
+$primary: #26428b; //dark cornflower blue
+$background: white;
 
-$palettes: (
-    primary: (base: $primary,
-        light: lighten($primary, 10),
-        dark: darken($primary, 10),
-    ),
-    accent: (base: $accent,
-        light: lighten($accent, 10),
-        dark: darken($accent, 10),
-    ),
-    warning: (base: $warning,
-        light: lighten($warning, 10),
-        dark: darken($warning, 10),
-    )
+//FONT
+$font-family: 'Roboto', sans-serif;
+$font-size: 20px;
+$font-weight: (
+    lt:300,
+    md:500,
+    hy:700,
+    xh:900,
 );
+
+//BREAKPOINTS
+$grid-breakpoints: (
+    xs: 0,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px,
+    xxl: 1400px
+);
+
+//MEASUREMENTS
+$nav-width: 10rem;
+$burger-width: $nav-width/3;
+$h-width:40px;
+$h-height:5px;
+$h-spacing:6px;
+$b-thickness:1px;
+
+
+//BORDER
+$primary-border: $b-thickness solid $primary;
