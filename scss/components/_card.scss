@@ -1,38 +1,43 @@
 .card {
-    margin: 1rem 0;
     outline: $primary-border;
-    transition: .5s ease;
-    top: 0;
-
-    &:hover {
-        top: -.75rem;
-    }
 
     &-img-top {
-        height: 20rem;
-        object-fit: contain;
+        object-fit: cover;
+        height: 15rem;
     }
 
     &-title {
-        font-size: 2rem;
+        font-size: 1.5rem;
+    }
+
+    &-body {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
         border-top: $primary-border;
-    }
-
-    &-text,
-    a {
         font-weight: getFontWeight(lt);
-    }
+        color: $primary  !important;
+        font-size: .9em;
 
-    &-text {
-        font-size: smaller;
-        height: 3rem;
-    }
+        &,
+        .links {
+            padding-top: .5rem;
+            padding-bottom: .5rem;
+        }
 
-    a {
-        @include hover-underline;
+        .links {
+            border-top: $primary-border;
+            margin-top: auto;
+            line-height: 2em;
 
-        i {
-            margin-left: .5rem;
+            a {
+                @include hover-underline;
+                width: max-content;
+
+                i {
+                    margin-left: .5rem;
+                }
+            }
         }
     }
 }

@@ -64,7 +64,6 @@
  * @site https://jonsuh.com/hamburgers
  * @link https://github.com/jonsuh/hamburgers
  */
-@use "sass:math";
 .hamburger {
   padding: 0 0;
   display: inline-block;
