@@ -298,6 +298,10 @@ footer #to-top .btn {
     #hero h1 {
       width: max-content; } }
 
+#contact-me a {
+  border-bottom: 1px solid transparent; }
+  #contact-me a:hover {
+    border-bottom: 1px solid #26428b; }
 #contact-me .form-control,
 #contact-me .form #message {
   padding: .6rem;

@@ -1,0 +1,18 @@
+#introduction {
+    height:100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .container-fluid {
+        border:$primary-border;
+        border-radius: 1rem;
+        @include media-breakpoint-up(lg) {
+            margin:2rem;
+        }
+    }
+
+    a {
+        @include always-underline;
+    }
+}

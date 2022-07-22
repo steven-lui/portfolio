@@ -236,12 +236,23 @@ footer #to-top .btn {
   width: 100%;
   color: #26428b; }
 
-#introduction a {
-  border-bottom: 1px solid transparent;
-  border-bottom: 1px solid #26428b; }
-  #introduction a:hover {
+#introduction {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  #introduction .container-fluid {
+    border: 1px solid #26428b;
+    border-radius: 1rem; }
+    @media (min-width: 992px) {
+      #introduction .container-fluid {
+        margin: 2rem; } }
+  #introduction a {
+    border-bottom: 1px solid transparent;
     border-bottom: 1px solid #26428b; }
-  #introduction a:hover {
-    border-bottom: 1px solid transparent; }
+    #introduction a:hover {
+      border-bottom: 1px solid #26428b; }
+    #introduction a:hover {
+      border-bottom: 1px solid transparent; }
 
 /*# sourceMappingURL=about.css.map */
