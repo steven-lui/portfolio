@@ -178,10 +178,10 @@ header .burger {
   left: 1rem;
   width: 3.3333333333rem;
   height: 3.3333333333rem; }
-  header .burger,
   header .burger .hamburger {
-    border-radius: 50%; }
-  header .burger .hamburger {
+    border-radius: 50%;
+    outline: 1px solid white;
+    outline-width: 3px;
     display: flex;
     width: 100%;
     height: 100%;
@@ -240,19 +240,32 @@ footer #to-top .btn {
   height: 100vh;
   display: flex;
   align-items: center;
-  justify-content: center; }
+  justify-content: center;
+  text-align: center; }
   #introduction .container-fluid {
-    border: 1px solid #26428b;
-    border-radius: 1rem; }
+    background-color: #26428b;
+    color: white;
+    border-color: white;
+    border-radius: 2rem; }
     @media (min-width: 992px) {
       #introduction .container-fluid {
         margin: 2rem; } }
   #introduction a {
     border-bottom: 1px solid transparent;
-    border-bottom: 1px solid #26428b; }
+    border-bottom: 1px solid #26428b;
+    background-color: #26428b;
+    color: white;
+    border-color: white;
+    background: linear-gradient(to right, white 50%, #26428b 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: 1s; }
     #introduction a:hover {
       border-bottom: 1px solid #26428b; }
     #introduction a:hover {
       border-bottom: 1px solid transparent; }
+    #introduction a:hover {
+      color: #26428b;
+      background-position: left bottom; }
 
 /*# sourceMappingURL=about.css.map */

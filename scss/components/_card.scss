@@ -1,5 +1,5 @@
 .card {
-    outline: $primary-border;
+    outline: $border-primary;
 
     &-img-top {
         object-fit: cover;
@@ -14,7 +14,7 @@
         display: flex;
         flex-direction: column;
         flex: 1;
-        border-top: $primary-border;
+        border-top: $border-primary;
         font-weight: getFontWeight(lt);
         color: $primary  !important;
         font-size: .9em;
@@ -26,7 +26,7 @@
         }
 
         .links {
-            border-top: $primary-border;
+            border-top: $border-primary;
             margin-top: auto;
             line-height: 2em;
 

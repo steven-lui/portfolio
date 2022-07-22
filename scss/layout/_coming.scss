@@ -1,4 +1,6 @@
-#introduction {
+#coming {
+    @include inverted-colors;
+
     height: 100vh;
     display: flex;
     align-items: center;
@@ -6,7 +8,9 @@
     text-align: center;
 
     .container-fluid {
-        @include inverted-colors;
+        width: max-content;
+
+        border: $border-background;
         border-radius: 2rem;
 
         @include media-breakpoint-up(lg) {

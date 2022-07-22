@@ -13,12 +13,10 @@ header {
         width: $burger-width;
         height: $burger-width;
 
-        &,
         .hamburger {
             border-radius: 50%;
-        }
-
-        .hamburger {
+            outline: $border-background;
+            outline-width: 3px;
             display: flex;
             width: 100%;
             height: 100%;
@@ -36,7 +34,7 @@ header {
     nav,
     #sidebar {
         width: $nav-width;
-        border-right: $primary-border;
+        border-right: $border-primary;
         overflow-x: hidden;
     }
 
@@ -66,7 +64,7 @@ header {
         }
 
         &-brand {
-            border-bottom: $primary-border  !important;
+            border-bottom: $border-primary  !important;
         }
 
         ul {
@@ -86,8 +84,8 @@ header {
         }
 
         .nav-contact {
-            border-top: $primary-border;
-            border-bottom: $primary-border;
+            border-top: $border-primary;
+            border-bottom: $border-primary;
             padding: .5rem 0;
             margin-top: 2rem;
         }
