@@ -152,7 +152,7 @@ section,
   @media (min-width: 992px) {
     section,
     #to-top {
-      padding-left: 11rem; } }
+      margin-left: 10rem; } }
 
 h1,
 h2 {
@@ -201,34 +201,36 @@ header #sidebar {
 header nav {
   height: 100%;
   top: 0;
-  left: 0;
-  background-color: rgba(255, 255, 255, 0.6); }
+  left: 0; }
 header .navbar {
   display: flex;
   text-align: center;
-  justify-content: center;
-  padding: 0; }
+  justify-content: center; }
+  header .navbar * {
+    margin: 0;
+    padding: 0; }
   header .navbar a {
     color: #26428b;
-    border-bottom: 1px solid transparent;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box; }
+    border-bottom: 1px solid transparent; }
     header .navbar a:hover {
       border-bottom: 1px solid #26428b; }
   header .navbar-brand {
     border-bottom: 1px solid #26428b !important; }
   header .navbar ul {
     list-style: none;
-    margin: 1rem 0;
-    padding: 0; }
-  header .navbar hr {
-    padding: 0;
-    margin: 0;
-    color: #26428b;
-    opacity: 1; }
+    margin-top: 1rem; }
+    header .navbar ul li {
+      margin-top: 1rem; }
   header .navbar .socials {
-    font-size: 1.5em; }
+    font-size: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: space-around; }
+  header .navbar .nav-contact {
+    border-top: 1px solid #26428b;
+    border-bottom: 1px solid #26428b;
+    padding: .5rem 0;
+    margin-top: 2rem; }
 
 footer #to-top .btn {
   width: 100%;
@@ -270,7 +272,8 @@ footer #to-top .btn {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100vh; }
+  height: 100vh;
+  text-align: center; }
   #hero * {
     color: white; }
   #hero .container-fluid {
@@ -283,19 +286,17 @@ footer #to-top .btn {
     font-family: 'Roboto Mono', monospace; }
   #hero h1 {
     font-size: 3rem;
-    margin-left: 0;
+    margin-left: auto;
     margin-right: auto; }
+    #hero h1::after {
+      animation: blink 1.5s step-end infinite;
+      content: "\FF5C"; }
+@keyframes blink {
+  50% {
+    color: transparent; } }
   @media (min-width: 992px) {
-    #hero {
-      text-align: center; }
-      #hero h1 {
-        border-right: 0.2em solid white;
-        animation: blink 1.5s step-end infinite;
-        width: max-content;
-        margin-left: auto; }
-    @keyframes blink {
-      50% {
-        border-color: transparent; } } }
+    #hero h1 {
+      width: max-content; } }
 
 #contact-me .form-control,
 #contact-me .form #message {

@@ -14,7 +14,7 @@ section,
     padding: 1rem;
 
     @include media-breakpoint-up(lg) {
-        padding-left: 1rem + $nav-width;
+        margin-left: $nav-width;
     }
 }
 

@@ -28,13 +28,15 @@
     @content;
 }
 
-@mixin blink($col) {
-    border-right: .2em solid $col;
-    animation: blink 1.5s step-end infinite;
+@mixin blink-carat($col) {
+    &::after {
+        animation: blink 1.5s step-end infinite;
+        content: "\FF5C";
+    }
 
     @keyframes blink {
         50% {
-            border-color: transparent;
+            color: transparent;
         }
     }
 

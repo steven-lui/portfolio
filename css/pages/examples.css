@@ -152,7 +152,7 @@ section,
   @media (min-width: 992px) {
     section,
     #to-top {
-      padding-left: 11rem; } }
+      margin-left: 10rem; } }
 
 h1,
 h2 {
@@ -201,34 +201,36 @@ header #sidebar {
 header nav {
   height: 100%;
   top: 0;
-  left: 0;
-  background-color: rgba(255, 255, 255, 0.6); }
+  left: 0; }
 header .navbar {
   display: flex;
   text-align: center;
-  justify-content: center;
-  padding: 0; }
+  justify-content: center; }
+  header .navbar * {
+    margin: 0;
+    padding: 0; }
   header .navbar a {
     color: #26428b;
-    border-bottom: 1px solid transparent;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box; }
+    border-bottom: 1px solid transparent; }
     header .navbar a:hover {
       border-bottom: 1px solid #26428b; }
   header .navbar-brand {
     border-bottom: 1px solid #26428b !important; }
   header .navbar ul {
     list-style: none;
-    margin: 1rem 0;
-    padding: 0; }
-  header .navbar hr {
-    padding: 0;
-    margin: 0;
-    color: #26428b;
-    opacity: 1; }
+    margin-top: 1rem; }
+    header .navbar ul li {
+      margin-top: 1rem; }
   header .navbar .socials {
-    font-size: 1.5em; }
+    font-size: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: space-around; }
+  header .navbar .nav-contact {
+    border-top: 1px solid #26428b;
+    border-bottom: 1px solid #26428b;
+    padding: .5rem 0;
+    margin-top: 2rem; }
 
 footer #to-top .btn {
   width: 100%;
