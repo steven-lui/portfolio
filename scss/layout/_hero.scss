@@ -5,39 +5,37 @@
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
-    padding: 0;
 
     * {
         color: white;
     }
 
     .container-fluid {
+        padding: 0;
         height: 100%;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-    }
-
-    //centered text
-    h1,
-    h2 {
-        margin-left: auto;
-        margin-right: auto;
-        width: max-content;
+        font-family: 'Roboto Mono', monospace;
     }
 
     h1 {
         font-size: 3rem;
+        margin-left: 0;
+        margin-right: auto;
     }
 
     h2 {
-        font-weight: getFontWeight(hy);
         font-size: 2rem;
     }
 
-    a {
-        @include media-breakpoint-up(lg) {
-            margin-left: $nav-width;
+    @include media-breakpoint-up(lg) {
+        text-align: center;
+
+        h1 {
+        @include blink(white);
+            width: max-content;
+            margin-left: auto;
         }
     }
 }

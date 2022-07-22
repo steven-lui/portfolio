@@ -27,3 +27,16 @@
 
     @content;
 }
+
+@mixin blink($col) {
+    border-right: .2em solid $col;
+    animation: blink 1.5s step-end infinite;
+
+    @keyframes blink {
+        50% {
+            border-color: transparent;
+        }
+    }
+
+    @content;
+}
