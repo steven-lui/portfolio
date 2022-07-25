@@ -39,3 +39,14 @@ a {
         color: inherit;
     }
 }
+
+.blockquote {
+    font-style: italic;
+    font-size: .95em;
+    text-align: end;
+
+    &-footer {
+    text-align: end;
+        font-size: .85em;
+    }
+}

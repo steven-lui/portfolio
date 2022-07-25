@@ -1,20 +1,45 @@
 #introduction {
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+    a {
+        @include always-underline;
+    }
 
-    .container-fluid {
-        @include inverted-colors;
-        border-radius: 2rem;
+    #heading {
+        border-bottom: $border-primary;
+        text-align: center;
+        padding-bottom: 1rem;
+        margin-bottom: 1rem;
 
-        @include media-breakpoint-up(lg) {
-            margin: 2rem;
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        p {
+            font-size: 1.5rem;
+            font-weight: getFontWeight(hy);
         }
     }
 
-    a {
-        @include always-underline-inverted;
+    #languages {
+        h2 {
+            margin-bottom: 1rem;
+        }
+
+        figure {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            font-size: 3rem;
+            margin: auto;
+
+            img {
+                height: 3rem;
+                object-fit: contain;
+            }
+        }
+
+        figcaption {
+            font-size: 1rem;
+        }
     }
 }

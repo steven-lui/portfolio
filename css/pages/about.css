@@ -169,6 +169,14 @@ a {
   a:hover {
     color: inherit; }
 
+.blockquote {
+  font-style: italic;
+  font-size: .95em;
+  text-align: end; }
+  .blockquote-footer {
+    text-align: end;
+    font-size: .85em; }
+
 header nav,
 header .burger {
   position: fixed;
@@ -236,36 +244,36 @@ footer #to-top .btn {
   width: 100%;
   color: #26428b; }
 
-#introduction {
-  height: 100vh;
+#introduction a {
+  border-bottom: 1px solid transparent;
+  border-bottom: 1px solid #26428b; }
+  #introduction a:hover {
+    border-bottom: 1px solid #26428b; }
+  #introduction a:hover {
+    border-bottom: 1px solid transparent; }
+#introduction #heading {
+  border-bottom: 1px solid #26428b;
+  text-align: center;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem; }
+  #introduction #heading * {
+    margin: 0;
+    padding: 0; }
+  #introduction #heading p {
+    font-size: 1.5rem;
+    font-weight: 700; }
+#introduction #languages h2 {
+  margin-bottom: 1rem; }
+#introduction #languages figure {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center; }
-  #introduction .container-fluid {
-    background-color: #26428b;
-    color: white;
-    border-color: white;
-    border-radius: 2rem; }
-    @media (min-width: 992px) {
-      #introduction .container-fluid {
-        margin: 2rem; } }
-  #introduction a {
-    border-bottom: 1px solid transparent;
-    border-bottom: 1px solid #26428b;
-    background-color: #26428b;
-    color: white;
-    border-color: white;
-    background: linear-gradient(to right, white 50%, #26428b 50%);
-    background-size: 200% 100%;
-    background-position: right bottom;
-    transition: 1s; }
-    #introduction a:hover {
-      border-bottom: 1px solid #26428b; }
-    #introduction a:hover {
-      border-bottom: 1px solid transparent; }
-    #introduction a:hover {
-      color: #26428b;
-      background-position: left bottom; }
+  flex-direction: column;
+  text-align: center;
+  font-size: 3rem;
+  margin: auto; }
+  #introduction #languages figure img {
+    height: 3rem;
+    object-fit: contain; }
+#introduction #languages figcaption {
+  font-size: 1rem; }
 
 /*# sourceMappingURL=about.css.map */
