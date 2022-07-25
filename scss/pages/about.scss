@@ -1,7 +1,0 @@
-@import "../styles.scss";
-
-#introduction {
-    a {
-        @include always-underline;
-    }
-}

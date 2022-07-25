@@ -1,10 +1,21 @@
+@import "bootstrap-5.2.0/mixins/breakpoints";
+
 @import "utilities/variables";
 @import "utilities/functions";
 @import "utilities/mixins";
 
 @import "components/hover/hover";
 @import "components/hamburgers/hamburgers";
+@import "components/figgrid";
+@import "components/card";
 
 @import "layout/base";
 @import "layout/header";
 @import "layout/footer";
+
+@import "layout/coming";
+@import "layout/contact";
+@import "layout/hero";
+@import "layout/introduction";
+@import "layout/languages";
+@import "layout/portfolio";

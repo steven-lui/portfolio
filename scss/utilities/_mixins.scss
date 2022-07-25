@@ -7,23 +7,34 @@
     @content;
 }
 
-@mixin hover-underline {
-    border-bottom: $b-thickness solid transparent;
+@mixin inverted-colors {
+    background-color: $primary;
+    color: $background;
+    border-color: $background;
 
-    &:hover {
-        border-bottom: $primary-border;
+    @content;
+}
+
+@mixin blink-carat($col) {
+    &::after {
+        animation: blink 1.5s step-end infinite;
+        content: "\FF5C";
+    }
+
+    @keyframes blink {
+        50% {
+            color: transparent;
+        }
     }
 
     @content;
 }
 
-@mixin always-underline {
-    @include hover-underline;
-    border-bottom: $primary-border;
-
-    &:hover {
-        border-bottom: $b-thickness solid transparent;
-    }
+@mixin flexy-centered {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 
     @content;
 }

@@ -7,11 +7,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Steven Lui &mid; Web Developer</title>
+    <title>Steven Lui&#xFF5C;Web Developer</title>
 
     <!-- BOOTSTRAP -->
     <link rel="stylesheet" href="css/bootstrap-5.2.0/bootstrap.css">
-    <script src="bootstrap-5.2.0-beta1-dist/js/bootstrap.min.js"></script>
+    <script src="js/bootstrap-5.2.0/bootstrap.min.js"></script>
 
     <!-- SLIM JQUERY -->
     <script src="js/jquery-3.6.0.slim.min.js"></script>
@@ -27,11 +27,14 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700;900&display=swap" rel="stylesheet">
 
+    <!-- MONOSPACE FOR TYPEWRITER -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@700&display=swap" rel="stylesheet">
+
     <!-- JONSUH HAMBURGERS -->
     <link href="css/hamburgers.css" rel="stylesheet">
 
     <!-- CUSTOM -->
-    <link rel="stylesheet" href="css/pages/index.css">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
@@ -58,14 +61,19 @@
                                 <li><a href="examples.html" class="nav-item">Coding Examples</a></li>
                                 <li><a href="scs.html" class="nav-item">SCS Scheme</a></li>
                             </ul>
-                            <hr>
-                            <a href="index.html#contact-me" class="nav-item">Contact Me</a>
-                            <hr>
+                            <div class="nav-contact">
+                                <a href="index.html#contact-me" class="nav-item">Contact Me</a>
+                            </div>
                             <ul class="socials">
                                 <li>
                                     <a class="nav-item" href="https://www.linkedin.com/in/steven-lui-332965245"
                                         target="_blank" rel="noopener noreferrer">
                                         <i class="fa-brands fa-linkedin"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://github.com/steven-lui/" target="_blank" rel="noopener noreferrer">
+                                        <i class="fa-brands fa-github"></i>
                                     </a>
                                 </li>
                             </ul>
@@ -81,20 +89,37 @@
                 <a href="index.html" class="navbar-brand"><img class="img-fluid" src="img/logo.png" alt="Logo"></a>
                 <div class="navbar-nav">
                     <ul>
-                        <li><a href="about.html" class="nav-item">About Me</a></li>
-                        <li><a href="index.html#portfolio" class="nav-item">My Portfolio</a></li>
-                        <li><a href="examples.html" class="nav-item">Coding Examples</a></li>
-                        <li><a href="scs.html" class="nav-item">SCS Scheme</a></li>
+                        <li><span class="hvr-overline-from-right">
+                                <span class="hvr-underline-from-left"><a href="about.html" class="nav-item">About
+                                        Me</a></span></span></li>
+                        <li><span class="hvr-overline-from-right">
+                                <span class="hvr-underline-from-left"><a href="index.html#portfolio" class="nav-item">My
+                                        Portfolio</a></span></span></li>
+                        <li><span class="hvr-overline-from-right">
+                                <span class="hvr-underline-from-left"><a href="examples.html" class="nav-item">Coding
+                                        Examples</a></span></span></li>
+                        <li><span class="hvr-overline-from-right">
+                                <span class="hvr-underline-from-left"><a href="scs.html" class="nav-item">SCS
+                                        Scheme</a></span></span></li>
                     </ul>
-                    <hr>
-                    <a href="index.html#contact-me" class="nav-item">Contact Me</a>
-                    <hr>
+                    <div class="nav-contact">
+                        <span class="hvr-overline-from-right">
+                            <span class="hvr-underline-from-left"><a href="index.html#contact-me"
+                                    class="nav-item">Contact Me</a></span></span>
+                    </div>
                     <ul class="socials">
                         <li>
-                            <a class="nav-item" href="https://www.linkedin.com/in/steven-lui-332965245" target="_blank"
-                                rel="noopener noreferrer">
-                                <i class="fa-brands fa-linkedin"></i>
-                            </a>
+                            <span class="hvr-overline-from-right">
+                                <span class="hvr-underline-from-left">
+                                    <a class="nav-item" href="https://www.linkedin.com/in/steven-lui-332965245"
+                                        target="_blank" rel="noopener noreferrer"><i
+                                            class="fa-brands fa-linkedin"></i></a></span></span>
+                        </li>
+                        <li>
+                            <span class="hvr-overline-from-right">
+                                <span class="hvr-underline-from-left">
+                                    <a href="https://github.com/steven-lui/" target="_blank"
+                                        rel="noopener noreferrer"><i class="fa-brands fa-github"></i></a></span></span>
                         </li>
                     </ul>
                 </div>
@@ -103,39 +128,43 @@
     </header>
 
     <main>
-        <section id="hero">
+        <section id="hero" aria-lavel="Background image by Kevin Laminto">
             <div class="container-fluid">
-                <h1>My Name is Steven Lui</h1>
-                <h2>I'm a Web Developer</h2>
-            </div>
-            <div class="container">
+                <div></div>
+                <div>
+                    <h1 class="d-lg-none">Steven Lui</h1>
+                    <h1 class="d-none d-lg-block">My name is Steven Lui</h1>
+                    <h2>I'm a Web Developer</h2>
+                </div>
+
                 <a href="#portfolio" class="btn">
-                    <p>
-                        Work in Progress
-                        <br>
-                        <i class="fa-solid fa-angle-down"></i>
-                    </p>
+                    Work in Progress
+                    <br>
+                    <i class="fa-solid fa-angle-down"></i>
                 </a>
             </div>
-
         </section>
 
         <section id="portfolio">
             <div class="container-fluid">
-                <div class="row justify-content-center">
-                    <div class="col-12 col-md-6 col-lg-4">
+                <div class="row gy-4 justify-content-center">
+                    <div class="col-12 col-md-6 col-xxl-4">
                         <div class="card">
                             <img src="img/placeholder.png" class="card-img-top" alt="Placeholder">
                             <div class="card-body">
-                                <h5 class="card-title">Project 1</h5>
-                                <p class="card-text">Project 1 text</p>
-                                <a href="#" class="stretched-link">View Project<i
-                                        class="fa-solid fa-arrow-right"></i></a>
+                                <h5 class="card-title">Placeholder</h5>
+                                <p class="card-text">Sweet roll gingerbread lollipop lemon drops icing wafer. Ice cream
+                                    chocolate cake candy brownie sesame snaps fruitcake gummies chocolate soufflé.</p>
+                                <div class="links">
+                                    <a>View Project<i class="fa-solid fa-arrow-right"></i></a>
+                                    <br>
+                                    <a>View Repository<i class="fa-solid fa-arrow-right"></i></a>
+                                </div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="col-12 col-md-6 col-lg-4">
+                    <div class="col-12 col-md-6 col-xxl-4">
                         <div class="card">
                             <img src="img/thumbnails/portfolio-2022-07-21-10_05_56.png" class="card-img-top"
                                 alt="Portfolio">
@@ -143,19 +172,28 @@
                                 <h5 class="card-title">Portfolio</h5>
                                 <p class="card-text">Yes, even this site! I'm doing as much as I can to make this site
                                     accessible to all, whilst showcasing my skills.</p>
-                                <a href="#" class="stretched-link">View Project<i
-                                        class="fa-solid fa-arrow-right"></i></a>
+                                <div class="links">
+                                    <a href="index.html">View Project<i class="fa-solid fa-arrow-right"></i></a>
+                                    <br>
+                                    <a href="https://github.com/steven-lui/portfolio/" target="_blank"
+                                        rel="noopener noreferrer">View Repository<i
+                                            class="fa-solid fa-arrow-right"></i></a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-12 col-md-6 col-lg-4">
+                    <div class="col-12 col-md-6 col-xxl-4">
                         <div class="card">
                             <img src="img/placeholder.png" class="card-img-top" alt="Placeholder">
                             <div class="card-body">
-                                <h5 class="card-title">Project 3</h5>
-                                <p class="card-text">Project 3 text</p>
-                                <a href="#" class="stretched-link">View Project<i
-                                        class="fa-solid fa-arrow-right"></i></a>
+                                <h5 class="card-title">Placeholder</h5>
+                                <p class="card-text">Macaroon biscuit croissant toffee gingerbread tootsie roll sugar
+                                    plum powder.</p>
+                                <div class="links">
+                                    <a>View Project<i class="fa-solid fa-arrow-right"></i></a>
+                                    <br>
+                                    <a>View Repository<i class="fa-solid fa-arrow-right"></i></a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -168,14 +206,24 @@
                 <div class="row">
                     <div class="col-12 col-lg-4">
                         <h2>Get In Touch</h2>
-                        <p>Fruitcake biscuit liquorice sugar plum pudding apple pie. Gummies pudding cookie jujubes
-                            candy jelly beans halvah. Danish fruitcake fruitcake carrot cake liquorice marshmallow
-                            soufflé sesame snaps apple pie.</p>
-                        <h3>Phone Number</h3>
-                        <h3>Email Address</h3>
-                        <p>Sweet roll cookie shortbread gummies sugar plum. Chocolate cake soufflé icing marshmallow oat
-                            cake tiramisu. Jelly beans caramels cake jujubes sweet cake donut cookie. Jelly donut jelly
-                            biscuit wafer marshmallow muffin.</p>
+                        <p>If you want to get in touch, please use my phone number or through my email.
+                            Using the form will do the same.
+                        </p>
+                        <h3>
+                            <span class="hvr-overline-from-right">
+                                <span class="hvr-underline-from-left">
+                                    <a href="tel:+447759262982">Telephone</a>
+                                </span>
+                            </span>
+                        </h3>
+                        <h3>
+                            <span class="hvr-overline-from-right">
+                                <span class="hvr-underline-from-left">
+                                    <a href="mailto:steven.lui@netmatters-scs.com">Email</a>
+                                </span>
+                            </span>
+                        </h3>
+                        <p>You can expect a response to all enquires within 3 working days between 9 AM and 5 PM GMT</p>
                     </div>
 
                     <div class="col">
@@ -197,7 +245,7 @@
                                     <textarea name="message" id="message" rows="10" placeholder="Message"></textarea>
                                 </div>
                                 <div class="col-12 col-lg-3">
-                                    <button type="submit" class="btn">Out of Order</button>
+                                    <button type="submit" class="btn">Submit</button>
                                 </div>
                             </div>
                         </form>

@@ -9,13 +9,13 @@ body {
     color: $primary;
 }
 
-section, #to-top {
+section,
+#to-top {
     padding: 1rem;
 
-    @media only screen and (min-width:map-get($grid-breakpoints, lg)) {
-        &:not(#hero) {
-            padding-left: 1rem + $nav-width;
-        }
+
+    @include media-breakpoint-up(lg) {
+        margin-left: $nav-width;
     }
 }
 
@@ -33,8 +33,28 @@ h5 {
 
 a {
     text-decoration: none;
-    color: inherit;
+    color: $primary;
+    border-bottom: $border-primary;
+
     &:hover {
-        color: inherit;
+        color: lighten($primary, 20%);
+        border-bottom: $b-thickness solid transparent;
+    }
+}
+
+blockquote {
+    font-style: italic;
+    font-size: .95rem !important;
+    text-align: end;
+}
+
+.blockquote-footer {
+    text-align: end;
+    font-size: .85rem !important;
+}
+
+.container-fluid {
+    @include media-breakpoint-up(xl) {
+        width: 75%;
     }
 }

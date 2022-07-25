@@ -1,0 +1,17 @@
+#coming {
+    @include inverted-colors;
+    @include flexy-centered;
+    height: 100vh;
+
+    .container-fluid {
+        width: max-content;
+        border: $border-background;
+        border-radius: 2rem;
+
+        h1 {
+            @include blink-carat($primary);
+            margin:0;
+            padding: 1rem 0 1.5rem 1rem;
+        }
+    }
+}

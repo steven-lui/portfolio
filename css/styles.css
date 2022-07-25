@@ -64,7 +64,6 @@
  * @site https://jonsuh.com/hamburgers
  * @link https://github.com/jonsuh/hamburgers
  */
-@use "sass:math";
 .hamburger {
   padding: 0 0;
   display: inline-block;
@@ -138,6 +137,46 @@
     transform: rotate(-90deg);
     transition: bottom 0.1s ease-out, transform 0.22s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1); }
 
+figure {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-size: 3rem;
+  margin: auto; }
+  figure img {
+    height: 3rem;
+    object-fit: contain; }
+
+figcaption {
+  font-size: 1rem; }
+
+.card {
+  outline: 1px solid #26428b; }
+  .card-img-top {
+    object-fit: cover;
+    height: 15rem; }
+  .card-title {
+    font-size: 1.5rem; }
+  .card-text {
+    margin-bottom: 0; }
+  .card-body {
+    display: inline-flex;
+    flex-direction: column;
+    border-top: 1px solid #26428b;
+    font-weight: 300;
+    font-size: .9em; }
+    .card-body,
+    .card-body .links {
+      padding-top: .5rem;
+      padding-bottom: .5rem; }
+    .card-body .links {
+      margin-top: auto;
+      line-height: 2em; }
+      .card-body .links i {
+        margin-left: .5em; }
+      .card-body .links a:hover {
+        border-bottom: 1px solid #26428b; }
+
 html {
   font-family: "Roboto", sans-serif;
   font-weight: 500;
@@ -147,11 +186,13 @@ body {
   background: white;
   color: #26428b; }
 
-section, #to-top {
+section,
+#to-top {
   padding: 1rem; }
-  @media only screen and (min-width: 992px) {
-    section:not(#hero), #to-top:not(#hero) {
-      padding-left: 11rem; } }
+  @media (min-width: 992px) {
+    section,
+    #to-top {
+      margin-left: 10rem; } }
 
 h1,
 h2 {
@@ -164,9 +205,24 @@ h5 {
 
 a {
   text-decoration: none;
-  color: inherit; }
+  color: #26428b;
+  border-bottom: 1px solid #26428b; }
   a:hover {
-    color: inherit; }
+    color: #4a6ecd;
+    border-bottom: 1px solid transparent; }
+
+blockquote {
+  font-style: italic;
+  font-size: .95rem !important;
+  text-align: end; }
+
+.blockquote-footer {
+  text-align: end;
+  font-size: .85rem !important; }
+
+@media (min-width: 1200px) {
+  .container-fluid {
+    width: 75%; } }
 
 header nav,
 header .burger {
@@ -177,10 +233,10 @@ header .burger {
   left: 1rem;
   width: 3.3333333333rem;
   height: 3.3333333333rem; }
-  header .burger,
   header .burger .hamburger {
-    border-radius: 50%; }
-  header .burger .hamburger {
+    border-radius: 50%;
+    outline: 1px solid white;
+    outline-width: 3px;
     display: flex;
     width: 100%;
     height: 100%;
@@ -200,37 +256,129 @@ header #sidebar {
 header nav {
   height: 100%;
   top: 0;
-  left: 0;
-  background-color: rgba(255, 255, 255, 0.6); }
+  left: 0; }
 header .navbar {
   display: flex;
   text-align: center;
-  justify-content: center;
-  padding: 0; }
-  header .navbar a {
-    color: #26428b;
-    border-bottom: 1px solid transparent;
+  justify-content: center; }
+  header .navbar * {
     margin: 0;
-    padding: 0;
-    box-sizing: border-box; }
-    header .navbar a:hover {
-      border-bottom: 1px solid #26428b; }
+    padding: 0; }
   header .navbar-brand {
     border-bottom: 1px solid #26428b !important; }
   header .navbar ul {
     list-style: none;
-    margin: 1rem 0;
-    padding: 0; }
-  header .navbar hr {
-    padding: 0;
-    margin: 0;
-    color: #26428b;
-    opacity: 1; }
+    margin-top: 1rem; }
+    header .navbar ul li {
+      margin-top: 1rem; }
   header .navbar .socials {
-    font-size: 1.5em; }
+    font-size: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: space-around; }
+  header .navbar .nav-contact {
+    border-top: 1px solid #26428b;
+    border-bottom: 1px solid #26428b;
+    padding: .5rem 0;
+    margin-top: 2rem; }
 
 footer #to-top .btn {
   width: 100%;
   color: #26428b; }
+
+#coming {
+  background-color: #26428b;
+  color: white;
+  border-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100vh; }
+  #coming .container-fluid {
+    width: max-content;
+    border: 1px solid white;
+    border-radius: 2rem; }
+    #coming .container-fluid h1 {
+      margin: 0;
+      padding: 1rem 0 1.5rem 1rem; }
+      #coming .container-fluid h1::after {
+        animation: blink 1.5s step-end infinite;
+        content: "\FF5C"; }
+@keyframes blink {
+  50% {
+    color: transparent; } }
+#contact-me .form-control,
+#contact-me .form #message {
+  padding: .6rem;
+  margin: .5rem 0;
+  background-color: inherit;
+  border-radius: .5rem;
+  border: none;
+  outline: 1px solid #26428b;
+  color: #26428b; }
+  #contact-me .form-control::placeholder,
+  #contact-me .form #message::placeholder {
+    color: rgba(38, 66, 139, 0.5); }
+#contact-me .form #message {
+  width: 100%; }
+  #contact-me .form #message::placeholder {
+    opacity: 1; }
+#contact-me .form .btn {
+  color: #26428b;
+  border: 1px solid #26428b;
+  width: 100%; }
+  #contact-me .form .btn:hover {
+    color: white;
+    background-color: #26428b; }
+
+#hero {
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.3)), url("../img/hero.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  text-align: center; }
+  #hero * {
+    color: white; }
+  #hero .container-fluid {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; }
+  #hero h1,
+  #hero h2 {
+    font-family: 'Roboto Mono', monospace; }
+  #hero h1 {
+    font-size: 3rem;
+    margin-left: auto;
+    margin-right: auto; }
+    #hero h1::after {
+      animation: blink 1.5s step-end infinite;
+      content: "\FF5C"; }
+@keyframes blink {
+  50% {
+    color: transparent; } }
+  @media (min-width: 992px) {
+    #hero h1 {
+      width: max-content; } }
+
+#introduction #heading {
+  border-bottom: 1px solid #26428b;
+  text-align: center;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem; }
+  #introduction #heading * {
+    margin: 0;
+    padding: 0; }
+  #introduction #heading p {
+    font-size: 1.5rem;
+    font-weight: 700; }
+
+#languages h2 {
+  margin-bottom: 1rem; }
+
+#portfolio .card {
+  height: 100%; }
 
 /*# sourceMappingURL=styles.css.map */

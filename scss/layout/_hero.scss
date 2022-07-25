@@ -1,36 +1,38 @@
 #hero {
     background-image: linear-gradient(to right, rgba(black, .8), rgba(black, .3)),
-        url("../../img/hero.jpg");
+        url("../img/hero.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin: auto;
-
-    h1 {
-        font-size: 3rem;
-    }
-
-    h2 {
-        font-weight: getFontWeight(hy);
-        font-size: 1.5rem;
-    }
+    text-align:center;
 
     * {
-        text-align: center;
         color: white;
     }
 
-    .btn {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        right: 0;
+    .container-fluid {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    h1,
+    h2 {
+        font-family: 'Roboto Mono', monospace;
+    }
+
+    h1 {
+        font-size: 3rem;
         margin-left: auto;
         margin-right: auto;
+        @include blink-carat(white);
+    }
+
+    @include media-breakpoint-up(lg) {
+        h1 {
+            width: max-content;
+        }
     }
 }

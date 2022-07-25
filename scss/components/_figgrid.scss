@@ -1,0 +1,16 @@
+figure {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: 3rem;
+    margin: auto;
+
+    img {
+        height: 3rem;
+        object-fit: contain;
+    }
+}
+
+figcaption {
+    font-size: 1rem;
+}
