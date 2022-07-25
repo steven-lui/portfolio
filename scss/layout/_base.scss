@@ -38,15 +38,25 @@ a {
     &:hover {
         color: inherit;
     }
+
+    :not(button) * {
+        @include always-underline;
+    }
 }
 
-.blockquote {
+blockquote {
     font-style: italic;
-    font-size: .95em;
+    font-size: .95rem !important;
     text-align: end;
+}
 
-    &-footer {
+.blockquote-footer {
     text-align: end;
-        font-size: .85em;
+    font-size: .85rem !important;
+}
+
+.container-fluid {
+    @include media-breakpoint-up(xl) {
+        width: 75%;
     }
 }

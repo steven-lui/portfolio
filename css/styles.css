@@ -168,14 +168,26 @@ a {
   color: inherit; }
   a:hover {
     color: inherit; }
+  a :not(button) * {
+    border-bottom: 1px solid transparent;
+    border-bottom: 1px solid #26428b; }
+    a :not(button) *:hover {
+      border-bottom: 1px solid #26428b; }
+    a :not(button) *:hover {
+      border-bottom: 1px solid transparent; }
 
-.blockquote {
+blockquote {
   font-style: italic;
-  font-size: .95em;
+  font-size: .95rem !important;
   text-align: end; }
-  .blockquote-footer {
-    text-align: end;
-    font-size: .85em; }
+
+.blockquote-footer {
+  text-align: end;
+  font-size: .85rem !important; }
+
+@media (min-width: 1200px) {
+  .container-fluid {
+    width: 75%; } }
 
 header nav,
 header .burger {
