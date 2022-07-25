@@ -248,34 +248,23 @@ footer #to-top .btn {
   background-color: #26428b;
   color: white;
   border-color: white;
-  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  text-align: center; }
+  text-align: center;
+  height: 100vh; }
   #coming .container-fluid {
     width: max-content;
     border: 1px solid white;
     border-radius: 2rem; }
-    @media (min-width: 992px) {
-      #coming .container-fluid {
-        margin: 2rem; } }
-  #coming a {
-    border-bottom: 1px solid transparent;
-    border-bottom: 1px solid #26428b;
-    background-color: #26428b;
-    color: white;
-    border-color: white;
-    background: linear-gradient(to right, white 50%, #26428b 50%);
-    background-size: 200% 100%;
-    background-position: right bottom;
-    transition: 1s; }
-    #coming a:hover {
-      border-bottom: 1px solid #26428b; }
-    #coming a:hover {
-      border-bottom: 1px solid transparent; }
-    #coming a:hover {
-      color: #26428b;
-      background-position: left bottom; }
+    #coming .container-fluid h1 {
+      margin: 0;
+      padding: 1rem 0 1.5rem 1rem; }
+      #coming .container-fluid h1::after {
+        animation: blink 1.5s step-end infinite;
+        content: "\FF5C"; }
+@keyframes blink {
+  50% {
+    color: transparent; } }
 
 /*# sourceMappingURL=examples.css.map */

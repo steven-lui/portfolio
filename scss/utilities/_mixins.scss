@@ -49,6 +49,8 @@
         color: $primary;
         background-position: left bottom;
     }
+
+    @content;
 }
 
 @mixin blink-carat($col) {
@@ -62,6 +64,15 @@
             color: transparent;
         }
     }
+
+    @content;
+}
+
+@mixin flexy-centered {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 
     @content;
 }
