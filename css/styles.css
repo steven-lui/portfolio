@@ -137,30 +137,6 @@
     transform: rotate(-90deg);
     transition: bottom 0.1s ease-out, transform 0.22s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1); }
 
-.card {
-  outline: 1px solid #26428b; }
-  .card-img-top {
-    object-fit: cover;
-    height: 15rem; }
-  .card-title {
-    font-size: 1.5rem; }
-  .card-body {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    border-top: 1px solid #26428b;
-    font-weight: 300;
-    color: #26428b !important;
-    font-size: .9em; }
-    .card-body,
-    .card-body .links {
-      padding-top: .5rem;
-      padding-bottom: .5rem; }
-    .card-body .links {
-      border-top: 1px solid #26428b;
-      margin-top: auto;
-      line-height: 2em; }
-
 figure {
   display: flex;
   flex-direction: column;
@@ -173,6 +149,33 @@ figure {
 
 figcaption {
   font-size: 1rem; }
+
+.card {
+  outline: 1px solid #26428b; }
+  .card-img-top {
+    object-fit: cover;
+    height: 15rem; }
+  .card-title {
+    font-size: 1.5rem; }
+  .card-text {
+    margin-bottom: 0; }
+  .card-body {
+    display: inline-flex;
+    flex-direction: column;
+    border-top: 1px solid #26428b;
+    font-weight: 300;
+    font-size: .9em; }
+    .card-body,
+    .card-body .links {
+      padding-top: .5rem;
+      padding-bottom: .5rem; }
+    .card-body .links {
+      margin-top: auto;
+      line-height: 2em; }
+      .card-body .links i {
+        margin-left: .5em; }
+      .card-body .links a:hover {
+        border-bottom: 1px solid #26428b; }
 
 html {
   font-family: "Roboto", sans-serif;
@@ -205,7 +208,7 @@ a {
   color: #26428b;
   border-bottom: 1px solid #26428b; }
   a:hover {
-    color: #26428b;
+    color: #4a6ecd;
     border-bottom: 1px solid transparent; }
 
 blockquote {

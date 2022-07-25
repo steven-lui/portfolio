@@ -37,11 +37,10 @@ a {
     border-bottom: $border-primary;
 
     &:hover {
-        color: $primary;
+        color: lighten($primary, 20%);
         border-bottom: $b-thickness solid transparent;
     }
 }
-
 
 blockquote {
     font-style: italic;
