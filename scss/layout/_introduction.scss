@@ -1,8 +1,4 @@
 #introduction {
-    a {
-        @include always-underline;
-    }
-
     #heading {
         border-bottom: $border-primary;
         text-align: center;

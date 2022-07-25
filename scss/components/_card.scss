@@ -29,15 +29,6 @@
             border-top: $border-primary;
             margin-top: auto;
             line-height: 2em;
-
-            a {
-                @include hover-underline;
-                width: max-content;
-
-                i {
-                    margin-left: .5rem;
-                }
-            }
         }
     }
 }

@@ -15,44 +15,6 @@
     @content;
 }
 
-@mixin hover-underline {
-    border-bottom: $b-thickness solid transparent;
-
-    &:hover {
-        border-bottom: $border-primary;
-    }
-
-    @content;
-}
-
-@mixin always-underline {
-    @include hover-underline;
-    border-bottom: $border-primary;
-
-    &:hover {
-        border-bottom: $b-thickness solid transparent;
-    }
-
-    @content;
-}
-
-@mixin always-underline-inverted {
-    @include always-underline;
-    @include inverted-colors;
-
-    background: linear-gradient(to right, $background 50%, $primary 50%);
-    background-size: 200% 100%;
-    background-position: right bottom;
-    transition: 1s;
-
-    &:hover {
-        color: $primary;
-        background-position: left bottom;
-    }
-
-    @content;
-}
-
 @mixin blink-carat($col) {
     &::after {
         animation: blink 1.5s step-end infinite;

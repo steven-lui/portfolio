@@ -137,6 +137,43 @@
     transform: rotate(-90deg);
     transition: bottom 0.1s ease-out, transform 0.22s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1); }
 
+.card {
+  outline: 1px solid #26428b; }
+  .card-img-top {
+    object-fit: cover;
+    height: 15rem; }
+  .card-title {
+    font-size: 1.5rem; }
+  .card-body {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    border-top: 1px solid #26428b;
+    font-weight: 300;
+    color: #26428b !important;
+    font-size: .9em; }
+    .card-body,
+    .card-body .links {
+      padding-top: .5rem;
+      padding-bottom: .5rem; }
+    .card-body .links {
+      border-top: 1px solid #26428b;
+      margin-top: auto;
+      line-height: 2em; }
+
+figure {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-size: 3rem;
+  margin: auto; }
+  figure img {
+    height: 3rem;
+    object-fit: contain; }
+
+figcaption {
+  font-size: 1rem; }
+
 html {
   font-family: "Roboto", sans-serif;
   font-weight: 500;
@@ -165,16 +202,11 @@ h5 {
 
 a {
   text-decoration: none;
-  color: inherit; }
+  color: #26428b;
+  border-bottom: 1px solid #26428b; }
   a:hover {
-    color: inherit; }
-  a :not(button) * {
-    border-bottom: 1px solid transparent;
-    border-bottom: 1px solid #26428b; }
-    a :not(button) *:hover {
-      border-bottom: 1px solid #26428b; }
-    a :not(button) *:hover {
-      border-bottom: 1px solid transparent; }
+    color: #26428b;
+    border-bottom: 1px solid transparent; }
 
 blockquote {
   font-style: italic;
@@ -229,11 +261,6 @@ header .navbar {
   header .navbar * {
     margin: 0;
     padding: 0; }
-  header .navbar a {
-    color: #26428b;
-    border-bottom: 1px solid transparent; }
-    header .navbar a:hover {
-      border-bottom: 1px solid #26428b; }
   header .navbar-brand {
     border-bottom: 1px solid #26428b !important; }
   header .navbar ul {
@@ -255,5 +282,100 @@ header .navbar {
 footer #to-top .btn {
   width: 100%;
   color: #26428b; }
+
+#coming {
+  background-color: #26428b;
+  color: white;
+  border-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100vh; }
+  #coming .container-fluid {
+    width: max-content;
+    border: 1px solid white;
+    border-radius: 2rem; }
+    #coming .container-fluid h1 {
+      margin: 0;
+      padding: 1rem 0 1.5rem 1rem; }
+      #coming .container-fluid h1::after {
+        animation: blink 1.5s step-end infinite;
+        content: "\FF5C"; }
+@keyframes blink {
+  50% {
+    color: transparent; } }
+#contact-me .form-control,
+#contact-me .form #message {
+  padding: .6rem;
+  margin: .5rem 0;
+  background-color: inherit;
+  border-radius: .5rem;
+  border: none;
+  outline: 1px solid #26428b;
+  color: #26428b; }
+  #contact-me .form-control::placeholder,
+  #contact-me .form #message::placeholder {
+    color: rgba(38, 66, 139, 0.5); }
+#contact-me .form #message {
+  width: 100%; }
+  #contact-me .form #message::placeholder {
+    opacity: 1; }
+#contact-me .form .btn {
+  color: #26428b;
+  border: 1px solid #26428b;
+  width: 100%; }
+  #contact-me .form .btn:hover {
+    color: white;
+    background-color: #26428b; }
+
+#hero {
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.3)), url("../img/hero.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  text-align: center; }
+  #hero * {
+    color: white; }
+  #hero .container-fluid {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; }
+  #hero h1,
+  #hero h2 {
+    font-family: 'Roboto Mono', monospace; }
+  #hero h1 {
+    font-size: 3rem;
+    margin-left: auto;
+    margin-right: auto; }
+    #hero h1::after {
+      animation: blink 1.5s step-end infinite;
+      content: "\FF5C"; }
+@keyframes blink {
+  50% {
+    color: transparent; } }
+  @media (min-width: 992px) {
+    #hero h1 {
+      width: max-content; } }
+
+#introduction #heading {
+  border-bottom: 1px solid #26428b;
+  text-align: center;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem; }
+  #introduction #heading * {
+    margin: 0;
+    padding: 0; }
+  #introduction #heading p {
+    font-size: 1.5rem;
+    font-weight: 700; }
+
+#languages h2 {
+  margin-bottom: 1rem; }
+
+#portfolio .card {
+  height: 100%; }
 
 /*# sourceMappingURL=styles.css.map */

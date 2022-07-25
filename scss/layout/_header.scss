@@ -58,11 +58,6 @@ header {
             padding: 0;
         }
 
-        a {
-            color: $primary;
-            @include hover-underline;
-        }
-
         &-brand {
             border-bottom: $border-primary  !important;
         }
