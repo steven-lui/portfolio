@@ -298,10 +298,13 @@ footer #to-top .btn {
   #coming .container-fluid {
     width: max-content;
     border: 1px solid white;
-    border-radius: 2rem; }
+    border-radius: 2rem;
+    font-family: "Roboto Mono", monospace;
+    font-weight: 500; }
     #coming .container-fluid h1 {
       margin: 0;
-      padding: 1rem 0 1.5rem 1rem; }
+      padding: 1rem;
+      padding-right: 0; }
       #coming .container-fluid h1::after {
         animation: blink 1.5s step-end infinite;
         content: "\FF5C"; }
@@ -348,7 +351,8 @@ footer #to-top .btn {
     justify-content: space-between; }
   #hero h1,
   #hero h2 {
-    font-family: 'Roboto Mono', monospace; }
+    font-family: "Roboto Mono", monospace;
+    font-weight: 500; }
   #hero h1 {
     font-size: 3rem;
     margin-left: auto;

@@ -5,7 +5,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
-    text-align:center;
+    text-align: center;
 
     * {
         color: white;
@@ -20,7 +20,8 @@
 
     h1,
     h2 {
-        font-family: 'Roboto Mono', monospace;
+        font-family: $font-family-mono;
+        font-weight: getFontWeight(md);
     }
 
     h1 {

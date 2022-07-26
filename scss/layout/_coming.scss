@@ -7,11 +7,14 @@
         width: max-content;
         border: $border-background;
         border-radius: 2rem;
+        font-family: $font-family-mono;
+        font-weight: getFontWeight(md);
 
         h1 {
             @include blink-carat($primary);
-            margin:0;
-            padding: 1rem 0 1.5rem 1rem;
+            margin: 0;
+            padding: 1rem;
+            padding-right: 0;
         }
     }
 }
