@@ -1,0 +1,20 @@
+#treehouse {
+    figure {
+        height: 100%;
+        outline: $border-primary;
+        border-radius: 1rem;
+        padding: 1rem;
+    }
+
+    [class*="col-12 col-md-4"]:not(.score) { //Selecting the parent div of the figure, I would need to do this in jquery
+        margin-top: .5rem;
+        @include media-breakpoint-down(md) {
+        }
+    }
+
+    .score {
+        @include media-breakpoint-down(lg) {
+            margin-top: 1.5rem;
+        }
+    }
+}
