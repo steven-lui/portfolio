@@ -34,5 +34,8 @@
                 background-color: $primary;
             }
         }
+        :required {
+            background:rgba($warning, .2);
+        }
     }
 }
