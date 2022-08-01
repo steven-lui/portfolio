@@ -16,6 +16,12 @@
             }
         }
 
+        //maintain field on one line
+        //for if text is added before a field
+        [class*="col-12"] {
+            margin-top: auto;
+        }
+
         #message {
             width: 100%;
 
@@ -34,8 +40,9 @@
                 background-color: $primary;
             }
         }
-        :required {
-            background:rgba($warning, .2);
+
+        .required {
+            background: rgba($warning, .2);
         }
     }
 }

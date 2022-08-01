@@ -323,6 +323,8 @@ footer #to-top .btn {
   #contact-me .form-control::placeholder,
   #contact-me .form #message::placeholder {
     color: rgba(38, 66, 139, 0.5); }
+#contact-me .form [class*="col-12"] {
+  margin-top: auto; }
 #contact-me .form #message {
   width: 100%; }
   #contact-me .form #message::placeholder {
