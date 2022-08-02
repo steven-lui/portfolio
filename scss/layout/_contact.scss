@@ -44,5 +44,18 @@
         .required {
             background: rgba($warning, .2);
         }
+
+        .thanks {
+            @include inverted-colors;
+            margin: auto calc(var(--bs-gutter-x) * .5);
+
+            @include media-breakpoint-down(lg) {
+                margin-top: 1rem;
+            }
+
+            text-align: center;
+            border: $border-primary;
+            border-radius: .5rem;
+        }
     }
 }

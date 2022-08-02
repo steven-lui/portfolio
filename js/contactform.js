@@ -27,8 +27,6 @@ const addRequired = (input) => {
 };
 
 function sendForm() {
-
-
     //remove all required here, add them back later
     $(".form-control").each(function () {
         let input = $(this); //object this iteration
@@ -51,9 +49,14 @@ function sendForm() {
             //!pattern here to fix on/off bug
             if (!pattern.test(value)) {
                 addRequired(input);
+                //reset form value if incorrect
+                input.val("");
                 //add to error
                 missing.push(` ${id}`);
             }
+            //input sanitised
+            //do nothing, this removes the issue about
+            else if (pattern.test(value));
         });
 
         //check fname, sname, email for errors
@@ -99,16 +102,24 @@ function sendForm() {
         //everything's valid!
         //PHP HERE
         console.log("Valid form");
+
+        //thank you message
+        let name = replaceSpecialChars($("#fname").val());
+        $(".thanks").text(`Thank you ${name}!`).slideDown().delay(2000).slideUp();
+
+        //reset after being sent
+        $(".form")[0].reset();
     }
     catch (error) {
         console.log(error);
     }
 }
 
-//reset form text
 //https://stackoverflow.com/questions/16452699/how-to-reset-a-form-using-jquery-with-reset-method
 $(function () {
+    //reset form text
     $(".form")[0].reset();
+    $(".thanks").hide();
 
     //test values
     $(".form #fname").val("Steven");
