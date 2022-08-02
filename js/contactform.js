@@ -122,9 +122,9 @@ $(function () {
     $(".thanks").hide();
 
     //test values
-    $(".form #fname").val("Steven");
-    $(".form #sname").val("Lui");
-    $(".form #email").val("admin@admin.com");
-    $(".form #subject").val("Dragée gummi bears jelly ice cream sesame snaps lemon drops.");
-    $(".form #message").val("Jelly-o!?! apple pie cookie dessert (oat----cake caramels biscuit) pastry chocolate.. <Topping cookie cupcake> bonbon chocolate cake tart!!!!! Tart cake tiramisu soufflé marzipan. Candy halvah cotton candy tiramisu chocolate cake powder soufflé chocolate bar donut. Icing sugar plum cake tiramisu brownie... Gummies pudding liquorice sweet roll carrot cake? Jelly shortbread chocolate bar biscuit tiramisu");
+    // $(".form #fname").val("Steven");
+    // $(".form #sname").val("Lui");
+    // $(".form #email").val("admin@admin.com");
+    // $(".form #subject").val("Dragée gummi bears jelly ice cream sesame snaps lemon drops.");
+    // $(".form #message").val("Jelly-o!?! apple pie cookie dessert (oat----cake caramels biscuit) pastry chocolate.. <Topping cookie cupcake> bonbon chocolate cake tart!!!!! Tart cake tiramisu soufflé marzipan. Candy halvah cotton candy tiramisu chocolate cake powder soufflé chocolate bar donut. Icing sugar plum cake tiramisu brownie... Gummies pudding liquorice sweet roll carrot cake? Jelly shortbread chocolate bar biscuit tiramisu");
 });
