@@ -232,7 +232,8 @@ header .burger {
   top: 1rem;
   left: 1rem;
   width: 3.3333333333rem;
-  height: 3.3333333333rem; }
+  height: 3.3333333333rem;
+  transition: margin 500ms ease-in-out; }
   header .burger .hamburger {
     border-radius: 50%;
     outline: 1px solid white;
@@ -246,14 +247,11 @@ header .burger {
     filter: opacity(40%); }
     header .burger .hamburger:hover {
       filter: opacity(80%); }
-header nav,
-header #sidebar {
-  width: 10rem;
-  border-right: 1px solid #26428b;
-  overflow-x: hidden; }
-header #sidebar {
-  background-color: white; }
 header nav {
+  width: 10rem;
+  outline: 1px solid #26428b;
+  overflow-x: hidden;
+  background-color: white;
   height: 100%;
   top: 0;
   left: 0; }
@@ -281,6 +279,13 @@ header .navbar {
     border-bottom: 1px solid #26428b;
     padding: .5rem 0;
     margin-top: 2rem; }
+
+.black-out {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000; }
 
 footer #to-top .btn {
   width: 100%;
@@ -323,6 +328,8 @@ footer #to-top .btn {
   #contact-me .form-control::placeholder,
   #contact-me .form #message::placeholder {
     color: rgba(38, 66, 139, 0.5); }
+#contact-me .form [class*="col-12"] {
+  margin-top: auto; }
 #contact-me .form #message {
   width: 100%; }
   #contact-me .form #message::placeholder {
@@ -334,6 +341,19 @@ footer #to-top .btn {
   #contact-me .form .btn:hover {
     color: white;
     background-color: #26428b; }
+#contact-me .form .required {
+  background: rgba(255, 0, 0, 0.2); }
+#contact-me .form .thanks {
+  background-color: #26428b;
+  color: white;
+  border-color: white;
+  margin: auto calc(var(--bs-gutter-x) * .5);
+  text-align: center;
+  border: 1px solid #26428b;
+  border-radius: .5rem; }
+  @media (max-width: 991.98px) {
+    #contact-me .form .thanks {
+      margin-top: 1rem; } }
 
 #hero {
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.3)), url("../img/hero.jpg");

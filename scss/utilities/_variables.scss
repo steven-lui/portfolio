@@ -1,6 +1,7 @@
 //COLOR
 $primary: #26428b; //dark cornflower blue
 $background: white;
+$warning: red;
 
 //FONT
 $font-family: 'Roboto', sans-serif;
@@ -35,3 +36,4 @@ $b-thickness:1px;
 //BORDER
 $border-primary: $b-thickness solid $primary;
 $border-background: $b-thickness solid $background;
+$border-warning: $b-thickness solid $warning;

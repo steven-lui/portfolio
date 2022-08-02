@@ -13,6 +13,8 @@ header {
         width: $burger-width;
         height: $burger-width;
 
+        transition: margin 500ms ease-in-out;
+
         .hamburger {
             border-radius: 50%;
             outline: $border-background;
@@ -31,18 +33,11 @@ header {
         }
     }
 
-    nav,
-    #sidebar {
-        width: $nav-width;
-        border-right: $border-primary;
-        overflow-x: hidden;
-    }
-
-    #sidebar {
-        background-color: $background;
-    }
-
     nav {
+        width: $nav-width;
+        outline: $border-primary;
+        overflow-x: hidden;
+        background-color: $background;
         height: 100%;
         top: 0;
         left: 0;
@@ -85,4 +80,12 @@ header {
             margin-top: 2rem;
         }
     }
+}
+
+.black-out {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    background-color: rgba(black, .5);
+    z-index: 1000;
 }
