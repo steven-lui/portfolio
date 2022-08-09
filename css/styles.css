@@ -416,4 +416,13 @@ footer #to-top .btn {
   #treehouse .score {
     margin-top: 1.5rem; } }
 
+#examples .ex::after {
+  animation: blink 1.5s step-end infinite;
+  content: "\FF5C"; }
+@keyframes blink {
+  50% {
+    color: transparent; } }
+#examples ul {
+  list-style-type: '- '; }
+
 /*# sourceMappingURL=styles.css.map */

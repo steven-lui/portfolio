@@ -34,7 +34,7 @@
 
     <!-- CUSTOM -->
     <link rel="stylesheet" href="css/styles.css">
-    <script src="js/typerwriter.js"></script>
+    <script src="js/typewriter.js"></script>
     <script src="js/navbar.js"></script>
 </head>
 
@@ -94,9 +94,38 @@
     </header>
 
     <main>
-        <section id="coming">
+        <section id="examples">
             <div class="container-fluid">
-                <h1>Coming Soon</h1>
+                <h1>Coding Examples</h1>
+                <article>
+                    <h2 class="typewriter ex">typewriter.js</h2>
+                    <ul>
+                        <li>This is the code I use for the typewriter effect</li>
+                        <li>The effect is created by clearing the text on the page, and then gradually adding the text
+                            back in</li>
+                        <li>I am using a random time delay, to make it seem more "human"</li>
+                    </ul>
+                    <figure>
+                        <img class="img-fluid" src="img/examples/typewriter.png" alt="Code for my typewriter effect">
+                        <figcaption>I can change the speed of the typing at any time this way</figcaption>
+                    </figure>
+                </article>
+                <article>
+                    <h2>Batch styling</h2>
+                    <ul>
+                        <li>In my netmatters reflection, I use a loop to style each services with a specific colour</li>
+                        <li>In the same loop, I also assign colours to each services card</li>
+                        <li>I attach the colour by using class names as a variable which corresponds to Sass variables</li>
+                    </ul>
+                    <figure>
+                        <img class="img-fluid" src="img/examples/services.png" alt="Code to batch style services cards">
+                        <figcaption>Using Sass's @each loop, I can procedurally make each class</figcaption>
+                    </figure>
+                    <figure>
+                        <img class="img-fluid" src="img/examples/colours.png" alt="Colour palettes used in my Netmatters reflection">
+                        <figcaption>I have a get command to retrieve colours from this map</figcaption>
+                    </figure>
+                </article>
             </div>
         </section>
     </main>

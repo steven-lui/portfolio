@@ -1,5 +1,5 @@
 $(function () { //on load
-    const txt = $("h1").text();
+    const txt = $(".typewriter").text();
     const speedMax = 200; //ms
     const speedMin = 50;
 
@@ -13,11 +13,11 @@ $(function () { //on load
     const wait = ms => new Promise(resolve => setTimeout(resolve, ms));
     const typeWriter = async () => {
         for (const c of txt) {
-            $("h1").text($("h1").text() + c);
+            $(".typewriter").text($(".typewriter").text() + c);
             await wait(rand(speedMin, speedMax));
         }
     }
 
-    $("h1").text("");
+    $(".typewriter").text("");
     typeWriter();
 });
