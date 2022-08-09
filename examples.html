@@ -100,10 +100,10 @@
                 <article>
                     <h2 class="typewriter ex">typewriter.js</h2>
                     <ul>
-                        <li>This is the code I use for the typewriter effect</li>
-                        <li>The effect is created by clearing the text on the page, and then gradually adding the text
-                            back in</li>
-                        <li>I am using a random time delay, to make it seem more "human"</li>
+                        <li>This is code I use for the typewriter effect, written in Javascript</li>
+                        <li>It clears the text on the page, before adding each text character back in</li>
+                        <li>I use this script to create the effect, as other methods are less responsive to text size
+                            and often are difficult to customise</li>
                     </ul>
                     <figure>
                         <img class="img-fluid" src="img/examples/typewriter.png" alt="Code for my typewriter effect">
@@ -113,16 +113,20 @@
                 <article>
                     <h2>Batch styling</h2>
                     <ul>
-                        <li>In my netmatters reflection, I use a loop to style each services with a specific colour</li>
-                        <li>In the same loop, I also assign colours to each services card</li>
-                        <li>I attach the colour by using class names as a variable which corresponds to Sass variables</li>
+                        <li>In my netmatters reflection, I use a loop in Sass to style each services with a specific
+                            colour</li>
+                        <li>It goes through each services colour in my palette (see second image) and then adds
+                            attributes based on that</li>
+                        <li>This method greatly reduces the amount of code I have to type, as it is all compiled into
+                            css with sass</li>
                     </ul>
                     <figure>
                         <img class="img-fluid" src="img/examples/services.png" alt="Code to batch style services cards">
                         <figcaption>Using Sass's @each loop, I can procedurally make each class</figcaption>
                     </figure>
                     <figure>
-                        <img class="img-fluid" src="img/examples/colours.png" alt="Colour palettes used in my Netmatters reflection">
+                        <img class="img-fluid" src="img/examples/colours.png"
+                            alt="Colour palettes used in my Netmatters reflection">
                         <figcaption>I have a get command to retrieve colours from this map</figcaption>
                     </figure>
                 </article>
@@ -131,6 +135,15 @@
     </main>
 
     <footer>
+        <div id="to-top">
+            <div class="container-fluid">
+                <a href="#" class="btn">
+                    <i class="fa-solid fa-angle-up"></i>
+                    <br>
+                    Back To Top
+                </a>
+            </div>
+        </div>
     </footer>
 </body>
 

@@ -424,5 +424,17 @@ footer #to-top .btn {
     color: transparent; } }
 #examples ul {
   list-style-type: '- '; }
+#examples figure {
+  background-color: #26428b;
+  color: white;
+  border-color: white;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border-radius: .5rem; }
+  #examples figure .img-fluid {
+    max-width: 100%; }
+  #examples figure figcaption {
+    font-style: italic; }
 
 /*# sourceMappingURL=styles.css.map */

@@ -2,7 +2,25 @@
     .ex {
         @include blink-carat($primary);
     }
+
     ul {
         list-style-type: '- ';
+    }
+
+    figure {
+        @include inverted-colors;
+
+        align-items: center;
+        margin-bottom: 1rem;
+        padding: 1rem;
+        border-radius: .5rem;
+
+        .img-fluid {
+            max-width: 100%;
+        }
+
+        figcaption {
+            font-style: italic;
+        }
     }
 }
