@@ -49,7 +49,6 @@ function sendForm() {
             let pattern = regex[id]; //regex pattern for this tag
             let value = replaceSpecialChars(input.val());
 
-            //input not sanitised
             //!pattern here to fix on/off bug
             if (!pattern.test(value)) {
                 //label for warning
@@ -58,10 +57,10 @@ function sendForm() {
                 //add to error
                 missing.push(`Error at ${id}: ${value} is not a good value`);
             }
-
             //input sanitised
-            //do nothing, this removes the issue about
-            else if (pattern.test(value));
+            else if (pattern.test(value)) {
+                console.log(`${id}: ${value}`);
+            }
         });
 
         //check fname, sname, email for errors
@@ -72,8 +71,6 @@ function sendForm() {
             let input = $(this); //object this iteration
             let id = input.attr("id");
             let value = input.val();
-            let sPattern = regex[id]; //regex sentence pattern for this tag
-            let breakLoop = false; //if any one sentence is wrong regex
 
             //if there is an input
             if (value != "") {
@@ -82,27 +79,11 @@ function sendForm() {
 
                 //validate each sentence
                 sentences.forEach(s => {
-                    //if input isn't broken yet
                     s = replaceSpecialChars(s);
-
-                    if (!breakLoop) {
-                        //validate input
-                        if (sPattern.test(s)) {
-                            //https://stackoverflow.com/questions/10805125/how-to-remove-all-line-breaks-from-a-string
-                            s = s.replace(/(\r\n|\n|\r)/gm, "");
-                        }
-                        else if (!sPattern.test(s)) {
-                            breakLoop = true;
-                            missing.push(` ${id} (${s})`);
-                        }
-                    }
+                    s.replace(/(\r\n|\n|\r)/gm, "");
                 });
             }
-
-            if (breakLoop) addRequired(input);
         });
-
-        checkError(missing);
 
         //everything's valid!
         //PHP HERE
@@ -153,7 +134,7 @@ $(function () {
     //this is not in reset form as the banner will immediately hide otherwise
     $(".thanks").hide();
 
-    //test values
+    // test values
     // $(".form #fname").val("Steven");
     // $(".form #sname").val("Lui");
     // $(".form #email").val("admin@admin.com");
