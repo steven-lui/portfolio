@@ -31,7 +31,7 @@ const addRequired = input => {
 
 function sendForm() {
     //remove all required labels here, add them back later
-    $(".form-control").each(function () {
+    $('.form-control:not("#message")').each(function () {
         let input = $(this); //object this iteration
         input.removeClass("required");
         $(`label[for=${input.attr("id")}]`).remove();
