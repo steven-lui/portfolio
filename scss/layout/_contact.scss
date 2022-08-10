@@ -1,8 +1,11 @@
 #contact-me {
     .form {
 
-        &-control,
-        #message {
+        //add the rounded border effect
+        .form-control,
+        .btn,
+        .thanks,
+        label[for=message] {
             padding: .6rem;
             margin: .5rem 0;
             background-color: inherit;
@@ -10,10 +13,6 @@
             border: none;
             outline: $border-primary;
             color: $primary;
-
-            &::placeholder {
-                color: rgba($primary, .5);
-            }
         }
 
         //maintain field on one line
@@ -22,41 +21,47 @@
             margin-top: auto;
         }
 
+        //style placeholder text
+        &-control,
         #message {
+            &::placeholder {
+                color: rgba($primary, .5);
+            }
+        }
+
+        label[for=message],
+        .thanks,
+        .btn {
             width: 100%;
+            text-align: center;
+        }
+
+        @include media-breakpoint-down(lg) {
+            label[for=message] {
+                margin-top: 0;
+            }
+
+            #message {
+                margin-bottom: 0;
+            }
+        }
+
+        #message {
             overflow-y: hidden;
 
+            //bootstrap changes textarea placeholder opacity
             &::placeholder {
                 opacity: 1;
             }
         }
 
-        .btn {
-            color: $primary;
-            border: 1px solid $primary;
-            width: 100%;
-
-            &:hover {
-                color: $background;
-                background-color: $primary;
-            }
+        .btn:hover,
+        .thanks {
+            @include inverted-colors;
         }
 
         .required {
             background: rgba($warning, .2);
-        }
-
-        .thanks {
-            @include inverted-colors;
-            margin: auto calc(var(--bs-gutter-x) * .5);
-
-            @include media-breakpoint-down(lg) {
-                margin-top: 1rem;
-            }
-
-            text-align: center;
-            border: $border-primary;
-            border-radius: .5rem;
         }
     }
 }

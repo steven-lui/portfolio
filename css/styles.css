@@ -316,8 +316,10 @@ footer #to-top .btn {
 @keyframes blink {
   50% {
     color: transparent; } }
-#contact-me .form-control,
-#contact-me .form #message {
+#contact-me .form .form-control,
+#contact-me .form .btn,
+#contact-me .form .thanks,
+#contact-me .form label[for=message] {
   padding: .6rem;
   margin: .5rem 0;
   background-color: inherit;
@@ -325,36 +327,32 @@ footer #to-top .btn {
   border: none;
   outline: 1px solid #26428b;
   color: #26428b; }
-  #contact-me .form-control::placeholder,
-  #contact-me .form #message::placeholder {
-    color: rgba(38, 66, 139, 0.5); }
 #contact-me .form [class*="col-12"] {
   margin-top: auto; }
-#contact-me .form #message {
+#contact-me .form-control::placeholder,
+#contact-me .form #message::placeholder {
+  color: rgba(38, 66, 139, 0.5); }
+#contact-me .form label[for=message],
+#contact-me .form .thanks,
+#contact-me .form .btn {
   width: 100%;
+  text-align: center; }
+@media (max-width: 991.98px) {
+  #contact-me .form label[for=message] {
+    margin-top: 0; }
+  #contact-me .form #message {
+    margin-bottom: 0; } }
+#contact-me .form #message {
   overflow-y: hidden; }
   #contact-me .form #message::placeholder {
     opacity: 1; }
-#contact-me .form .btn {
-  color: #26428b;
-  border: 1px solid #26428b;
-  width: 100%; }
-  #contact-me .form .btn:hover {
-    color: white;
-    background-color: #26428b; }
-#contact-me .form .required {
-  background: rgba(255, 0, 0, 0.2); }
+#contact-me .form .btn:hover,
 #contact-me .form .thanks {
   background-color: #26428b;
   color: white;
-  border-color: white;
-  margin: auto calc(var(--bs-gutter-x) * .5);
-  text-align: center;
-  border: 1px solid #26428b;
-  border-radius: .5rem; }
-  @media (max-width: 991.98px) {
-    #contact-me .form .thanks {
-      margin-top: 1rem; } }
+  border-color: white; }
+#contact-me .form .required {
+  background: rgba(255, 0, 0, 0.2); }
 
 #hero {
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.3)), url("../img/hero.jpg");
