@@ -331,7 +331,8 @@ footer #to-top .btn {
 #contact-me .form [class*="col-12"] {
   margin-top: auto; }
 #contact-me .form #message {
-  width: 100%; }
+  width: 100%;
+  overflow-y: hidden; }
   #contact-me .form #message::placeholder {
     opacity: 1; }
 #contact-me .form .btn {
