@@ -49,7 +49,7 @@ function sendForm() {
             let pattern = regex[id]; //regex pattern for this tag
             let value = replaceSpecialChars(input.val());
 
-            //!pattern here to fix on/off bug
+            //not sanitised
             if (!pattern.test(value)) {
                 //label for warning
                 addRequired(input);
@@ -69,7 +69,7 @@ function sendForm() {
         //subject, message
         $("#message, #subject").each(function () {
             let input = $(this); //object this iteration
-            let id = input.attr("id");
+            // let id = input.attr("id");
             let value = input.val();
 
             //if there is an input
@@ -114,8 +114,6 @@ $('#message').on("input", function () {
     var cur = $(this).val().length;
     //update label with character count
     $(`label[for='message']`).text(cur >= max ? `Max characters` : `${cur} / ${max}`);
-
-    //console.log(`Message is being typed: ${cur} / ${max}`); //log
 });
 
 //DOES NOT INCLUDE HIDE THANKS
