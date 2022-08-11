@@ -9,10 +9,10 @@ let regex = {
     message: /.*/
 };
 
-const checkError = errorArray => { if (errorArray.length != 0) throw `Error:${[...errorArray]} fields are incorrect`; };
+const checkError = errorArray => { if (errorArray.length != 0) throw errorArray; };
 
 //https://www.sitepoint.com/jquery-strip-harmful-characters-string/
-const replaceSpecialChars = (str) => {
+const replaceSpecialChars = str => {
     return str.normalize('NFD').replace(/[\u0300-\u036f]/g, '') // Remove accents
         //.replace(/([^\w]+|\s+)/g, '-') // Replace space and other characters by hyphen
         .replace(/\-\-+/g, '-')	// Replaces multiple hyphens by one hyphen
@@ -21,19 +21,23 @@ const replaceSpecialChars = (str) => {
         .replace(/[&"'<>]/g, '');
 };
 
-const addRequired = (input) => {
+//add a label to bad fields
+const addRequired = input => {
+    let placeholder = input.attr("placeholder");
+    let string = `<label for="${input.attr("id")}" style="color:red;"}">Please fill out your ${placeholder.substring(0, placeholder.length - 1).toLowerCase()} correctly`;
     input.addClass("required");
-    input.before(`<label for="${input.attr("id")}" style="color:red;"}">Please fill out this field correctly`);
+    input.before(string);
 };
 
 function sendForm() {
-    //remove all required here, add them back later
-    $(".form-control").each(function () {
+    //remove all required labels here, add them back later
+    $('.form-control:not("#message")').each(function () {
         let input = $(this); //object this iteration
         input.removeClass("required");
         $(`label[for=${input.attr("id")}]`).remove();
     });
 
+    //array of errors
     let missing = [];
 
     try {
@@ -45,18 +49,18 @@ function sendForm() {
             let pattern = regex[id]; //regex pattern for this tag
             let value = replaceSpecialChars(input.val());
 
-            //input not sanitised
-            //!pattern here to fix on/off bug
+            //not sanitised
             if (!pattern.test(value)) {
+                //label for warning
                 addRequired(input);
-                //reset form value if incorrect
-                input.val("");
+
                 //add to error
-                missing.push(` ${id}`);
+                missing.push(`Error at ${id}: ${value} is not a good value`);
             }
             //input sanitised
-            //do nothing, this removes the issue about
-            else if (pattern.test(value));
+            else if (pattern.test(value)) {
+                console.log(`${id}: ${value}`);
+            }
         });
 
         //check fname, sname, email for errors
@@ -65,10 +69,8 @@ function sendForm() {
         //subject, message
         $("#message, #subject").each(function () {
             let input = $(this); //object this iteration
-            let id = input.attr("id");
+            // let id = input.attr("id");
             let value = input.val();
-            let sPattern = regex[id]; //regex sentence pattern for this tag
-            let breakLoop = false; //if any one sentence is wrong regex
 
             //if there is an input
             if (value != "") {
@@ -77,51 +79,60 @@ function sendForm() {
 
                 //validate each sentence
                 sentences.forEach(s => {
-                    //if input isn't broken yet
                     s = replaceSpecialChars(s);
-
-                    if (!breakLoop) {
-                        //validate input
-                        if (sPattern.test(s)) {
-                            //https://stackoverflow.com/questions/10805125/how-to-remove-all-line-breaks-from-a-string
-                            s = s.replace(/(\r\n|\n|\r)/gm, "");
-                        }
-                        else if (!sPattern.test(s)) {
-                            breakLoop = true;
-                            missing.push(` ${id} (${s})`);
-                        }
-                    }
+                    s.replace(/(\r\n|\n|\r)/gm, "");
                 });
             }
-
-            if (breakLoop) addRequired(input);
         });
-
-        checkError(missing);
 
         //everything's valid!
         //PHP HERE
-        console.log("Valid form");
+        console.log("Valid form, ready for PHP");
 
         //thank you message
         let name = replaceSpecialChars($("#fname").val());
         $(".thanks").text(`Thank you ${name}!`).slideDown().delay(2000).slideUp();
 
-        //reset after being sent
-        $(".form")[0].reset();
+        resetForm();
     }
     catch (error) {
-        console.log(error);
+        error.forEach(element => {
+            console.log(element);
+        });
     }
+}
+
+//https://stackoverflow.com/questions/5371089/count-characters-in-textarea
+$('#message').on("input", function () {
+    //https://stackoverflow.com/questions/454202/creating-a-textarea-with-auto-resize
+    //resize
+    this.style.height = "auto"; //shrink for deleted text
+    this.style.height = (this.scrollHeight) + "px"; //grow for added text
+
+    //character length
+    var max = $(this).attr("maxlength");
+    var cur = $(this).val().length;
+    //update label with character count
+    $(`label[for='message']`).text(cur >= max ? `Max characters` : `${cur} / ${max}`);
+});
+
+//DOES NOT INCLUDE HIDE THANKS
+function resetForm() {
+    $(".form")[0].reset();
+
+    //https://stackoverflow.com/questions/36087612/reset-textarea-height-in-javascript
+    $("#message").attr("style", "").val("");
+    $("#message").css("style", "height:" + ($('#message')[0].scrollHeight) + "px;");
+    $(`label[for='message']`).text(`0 / ${$('#message').attr("maxlength")}`);
 }
 
 //https://stackoverflow.com/questions/16452699/how-to-reset-a-form-using-jquery-with-reset-method
 $(function () {
-    //reset form text
-    $(".form")[0].reset();
+    resetForm();
+    //this is not in reset form as the banner will immediately hide otherwise
     $(".thanks").hide();
 
-    //test values
+    // test values
     // $(".form #fname").val("Steven");
     // $(".form #sname").val("Lui");
     // $(".form #email").val("admin@admin.com");
