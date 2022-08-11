@@ -5,7 +5,7 @@
         .form-control,
         .btn,
         .thanks,
-        label[for=message] {
+        .char-count {
             padding: .6rem;
             margin: .5rem 0;
             background-color: inherit;
@@ -29,7 +29,7 @@
             }
         }
 
-        label[for=message],
+        .char-count,
         .thanks,
         .btn {
             width: 100%;
@@ -37,7 +37,7 @@
         }
 
         @include media-breakpoint-down(lg) {
-            label[for=message] {
+            .char-count {
                 margin-top: 0;
             }
 
@@ -53,6 +53,10 @@
             &::placeholder {
                 opacity: 1;
             }
+        }
+
+        .char-count {
+            outline: none;
         }
 
         .btn:hover,

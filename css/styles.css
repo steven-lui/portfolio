@@ -319,7 +319,7 @@ footer #to-top .btn {
 #contact-me .form .form-control,
 #contact-me .form .btn,
 #contact-me .form .thanks,
-#contact-me .form label[for=message] {
+#contact-me .form .char-count {
   padding: .6rem;
   margin: .5rem 0;
   background-color: inherit;
@@ -332,13 +332,13 @@ footer #to-top .btn {
 #contact-me .form-control::placeholder,
 #contact-me .form #message::placeholder {
   color: rgba(38, 66, 139, 0.5); }
-#contact-me .form label[for=message],
+#contact-me .form .char-count,
 #contact-me .form .thanks,
 #contact-me .form .btn {
   width: 100%;
   text-align: center; }
 @media (max-width: 991.98px) {
-  #contact-me .form label[for=message] {
+  #contact-me .form .char-count {
     margin-top: 0; }
   #contact-me .form #message {
     margin-bottom: 0; } }
@@ -346,6 +346,8 @@ footer #to-top .btn {
   overflow-y: hidden; }
   #contact-me .form #message::placeholder {
     opacity: 1; }
+#contact-me .form .char-count {
+  outline: none; }
 #contact-me .form .btn:hover,
 #contact-me .form .thanks {
   background-color: #26428b;
