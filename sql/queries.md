@@ -1,5 +1,4 @@
 # Queries
-<!--
 ## 1
 From the following table, write a SQL query to find the actors who played a role in the movie 'Annie Hall'. Return all the fields of actor table.
 ``` sql
@@ -39,7 +38,6 @@ It's important to note that this is relatively bad way to write this query. This
 - Its hard to read
 - No clear structure to the join order
 - It would be hard to maintain this query by anyone (including myself) in the future.
--->
 ## 5
 From the following tables, write a SQL query to find those movies directed by the director whose first name is Woddy and last name is Allen. Return movie title.
 ``` sql
