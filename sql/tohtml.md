@@ -36,8 +36,8 @@ ORDER BY dir_lname;
 ```
 ``` sql
 SELECT mov_title AS "Movie Title", mov_year AS "Year", to_char(mov_dt_rel, 'DD/MM/YYYY') AS "Release Date" , dir_fname || ' ' || dir_lname AS "Director", act_fname || ' ' || act_lname AS "Actor" FROM movie_direction AS md
-JOIN (SELECT * FROM movie WHERE mov_dt_rel IS NOT NULL) AS m
-    ON m.mov_id = md.mov_id -- movies with a release date
+JOIN (SELECT * FROM movie WHERE mov_dt_rel IS NOT NULL) AS m -- movies with a release date
+    ON m.mov_id = md.mov_id
 JOIN director AS d ON d.dir_id = md.dir_id
 JOIN movie_cast AS mc ON mc.mov_id = md.mov_id
 JOIN actor AS a ON a.act_id = mc.act_id
