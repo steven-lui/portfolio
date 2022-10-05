@@ -1,0 +1,708 @@
+/*!
+ * Hover.css (http://ianlunn.github.io/Hover/)
+ * Version: 2.3.2
+ * Author: Ian Lunn @IanLunn
+ * Author URL: http://ianlunn.co.uk/
+ * Github: https://github.com/IanLunn/Hover
+
+ * Hover.css Copyright Ian Lunn 2017. Generated with Sass.
+ */
+/* Underline From Left */
+/* line 17, ../GitHub/portfolio/scss/components/hover/_hover.scss */
+.hvr-underline-from-left {
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  overflow: hidden;
+}
+
+/* line 9, ../GitHub/portfolio/scss/components/hover/effects/border-transitions/_underline-from-left.scss */
+.hvr-underline-from-left:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  right: 100%;
+  bottom: -1px;
+  background: #26428b;
+  height: 1px;
+  -webkit-transition-property: right;
+  transition-property: right;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+
+/* line 27, ../GitHub/portfolio/scss/components/hover/effects/border-transitions/_underline-from-left.scss */
+.hvr-underline-from-left:hover:before, .hvr-underline-from-left:focus:before, .hvr-underline-from-left:active:before {
+  right: 0;
+}
+
+/* Overline From Right */
+/* line 24, ../GitHub/portfolio/scss/components/hover/_hover.scss */
+.hvr-overline-from-right {
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  overflow: hidden;
+}
+
+/* line 9, ../GitHub/portfolio/scss/components/hover/effects/border-transitions/_overline-from-right.scss */
+.hvr-overline-from-right:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 100%;
+  right: 0;
+  top: 0;
+  background: #26428b;
+  height: 1px;
+  -webkit-transition-property: left;
+  transition-property: left;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+
+/* line 27, ../GitHub/portfolio/scss/components/hover/effects/border-transitions/_overline-from-right.scss */
+.hvr-overline-from-right:hover:before, .hvr-overline-from-right:focus:before, .hvr-overline-from-right:active:before {
+  left: 0;
+}
+
+/*!
+ * Hamburgers
+ * @description Tasty CSS-animated hamburgers
+ * @author Jonathan Suh @jonsuh
+ * @site https://jonsuh.com/hamburgers
+ * @link https://github.com/jonsuh/hamburgers
+ */
+/* line 3, ../GitHub/portfolio/scss/components/hamburgers/_base.scss */
+.hamburger {
+  padding: 0 0;
+  display: inline-block;
+  cursor: pointer;
+  transition-property: opacity, filter;
+  transition-duration: 0.15s;
+  transition-timing-function: linear;
+  font: inherit;
+  color: inherit;
+  text-transform: none;
+  background-color: transparent;
+  border: 0;
+  margin: 0;
+  overflow: visible;
+}
+
+/* line 21, ../GitHub/portfolio/scss/components/hamburgers/_base.scss */
+.hamburger:hover {
+  opacity: 1;
+}
+
+/* line 32, ../GitHub/portfolio/scss/components/hamburgers/_base.scss */
+.hamburger.is-active:hover {
+  opacity: 1;
+}
+
+/* line 42, ../GitHub/portfolio/scss/components/hamburgers/_base.scss */
+.hamburger.is-active .hamburger-inner,
+.hamburger.is-active .hamburger-inner::before,
+.hamburger.is-active .hamburger-inner::after {
+  background-color: white;
+}
+
+/* line 50, ../GitHub/portfolio/scss/components/hamburgers/_base.scss */
+.hamburger-box {
+  width: 40px;
+  height: 27px;
+  display: inline-block;
+  position: relative;
+}
+
+/* line 57, ../GitHub/portfolio/scss/components/hamburgers/_base.scss */
+.hamburger-inner {
+  display: block;
+  top: 50%;
+  margin-top: -2.5px;
+}
+
+/* line 62, ../GitHub/portfolio/scss/components/hamburgers/_base.scss */
+.hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+  width: 40px;
+  height: 5px;
+  background-color: white;
+  border-radius: 4px;
+  position: absolute;
+  transition-property: transform;
+  transition-duration: 0.15s;
+  transition-timing-function: ease;
+}
+
+/* line 75, ../GitHub/portfolio/scss/components/hamburgers/_base.scss */
+.hamburger-inner::before, .hamburger-inner::after {
+  content: "";
+  display: block;
+}
+
+/* line 81, ../GitHub/portfolio/scss/components/hamburgers/_base.scss */
+.hamburger-inner::before {
+  top: -11px;
+}
+
+/* line 85, ../GitHub/portfolio/scss/components/hamburgers/_base.scss */
+.hamburger-inner::after {
+  bottom: -11px;
+}
+
+/*
+   * Spin
+   */
+/* line 6, ../GitHub/portfolio/scss/components/hamburgers/_spin.scss */
+.hamburger--spin .hamburger-inner {
+  transition-duration: 0.22s;
+  transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+/* line 10, ../GitHub/portfolio/scss/components/hamburgers/_spin.scss */
+.hamburger--spin .hamburger-inner::before {
+  transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in;
+}
+
+/* line 15, ../GitHub/portfolio/scss/components/hamburgers/_spin.scss */
+.hamburger--spin .hamburger-inner::after {
+  transition: bottom 0.1s 0.25s ease-in, transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+/* line 22, ../GitHub/portfolio/scss/components/hamburgers/_spin.scss */
+.hamburger--spin.is-active .hamburger-inner {
+  transform: rotate(225deg);
+  transition-delay: 0.12s;
+  transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+/* line 27, ../GitHub/portfolio/scss/components/hamburgers/_spin.scss */
+.hamburger--spin.is-active .hamburger-inner::before {
+  top: 0;
+  opacity: 0;
+  transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out;
+}
+
+/* line 34, ../GitHub/portfolio/scss/components/hamburgers/_spin.scss */
+.hamburger--spin.is-active .hamburger-inner::after {
+  bottom: 0;
+  transform: rotate(-90deg);
+  transition: bottom 0.1s ease-out, transform 0.22s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+/* line 1, ../GitHub/portfolio/scss/components/_figgrid.scss */
+figure {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-size: 3rem;
+  margin: auto;
+}
+
+/* line 8, ../GitHub/portfolio/scss/components/_figgrid.scss */
+figure img {
+  height: 3rem;
+  object-fit: contain;
+}
+
+/* line 14, ../GitHub/portfolio/scss/components/_figgrid.scss */
+figcaption {
+  font-size: 1rem;
+}
+
+/* line 1, ../GitHub/portfolio/scss/components/_card.scss */
+.card {
+  outline: 1px solid #26428b;
+}
+
+/* line 4, ../GitHub/portfolio/scss/components/_card.scss */
+.card-img-top {
+  object-fit: contain;
+  height: 15rem;
+}
+
+/* line 9, ../GitHub/portfolio/scss/components/_card.scss */
+.card-title {
+  font-size: 1.5rem;
+}
+
+/* line 13, ../GitHub/portfolio/scss/components/_card.scss */
+.card-text {
+  margin-bottom: 0;
+}
+
+/* line 17, ../GitHub/portfolio/scss/components/_card.scss */
+.card-body {
+  display: inline-flex;
+  flex-direction: column;
+  border-top: 1px solid #26428b;
+  font-weight: 300;
+  font-size: .9em;
+}
+
+/* line 24, ../GitHub/portfolio/scss/components/_card.scss */
+.card-body,
+.card-body .links {
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+}
+
+/* line 30, ../GitHub/portfolio/scss/components/_card.scss */
+.card-body .links {
+  margin-top: auto;
+  line-height: 2em;
+}
+
+/* line 34, ../GitHub/portfolio/scss/components/_card.scss */
+.card-body .links i {
+  margin-left: .5em;
+}
+
+/* line 38, ../GitHub/portfolio/scss/components/_card.scss */
+.card-body .links a:hover {
+  border-bottom: 1px solid #26428b;
+}
+
+/* line 1, ../GitHub/portfolio/scss/layout/_base.scss */
+html {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+}
+
+/* line 7, ../GitHub/portfolio/scss/layout/_base.scss */
+body {
+  background: white;
+  color: #26428b;
+}
+
+/* line 12, ../GitHub/portfolio/scss/layout/_base.scss */
+section,
+#to-top {
+  padding: 1rem;
+}
+
+@media (min-width: 992px) {
+  /* line 12, ../GitHub/portfolio/scss/layout/_base.scss */
+  section,
+  #to-top {
+    margin-left: 10rem;
+  }
+}
+
+/* line 22, ../GitHub/portfolio/scss/layout/_base.scss */
+h1,
+h2 {
+  font-weight: 900;
+}
+
+/* line 27, ../GitHub/portfolio/scss/layout/_base.scss */
+h3,
+h4,
+h5 {
+  font-weight: 700;
+}
+
+/* line 34, ../GitHub/portfolio/scss/layout/_base.scss */
+a {
+  text-decoration: none;
+  color: #26428b;
+  border-bottom: 1px solid #26428b;
+}
+
+/* line 39, ../GitHub/portfolio/scss/layout/_base.scss */
+a:hover {
+  color: #4a6ecd;
+  border-bottom: 1px solid transparent;
+}
+
+/* line 45, ../GitHub/portfolio/scss/layout/_base.scss */
+blockquote {
+  font-style: italic;
+  font-size: .95rem !important;
+  text-align: end;
+}
+
+/* line 51, ../GitHub/portfolio/scss/layout/_base.scss */
+.blockquote-footer {
+  text-align: end;
+  font-size: .85rem !important;
+}
+
+@media (min-width: 1200px) {
+  /* line 56, ../GitHub/portfolio/scss/layout/_base.scss */
+  .container-fluid {
+    width: 75%;
+  }
+}
+
+/* line 3, ../GitHub/portfolio/scss/layout/_header.scss */
+header nav,
+header .burger {
+  position: fixed;
+  z-index: 10000;
+}
+
+/* line 9, ../GitHub/portfolio/scss/layout/_header.scss */
+header .burger {
+  top: 1rem;
+  left: 1rem;
+  width: 3.33333rem;
+  height: 3.33333rem;
+  transition: margin 500ms ease-in-out;
+}
+
+/* line 18, ../GitHub/portfolio/scss/layout/_header.scss */
+header .burger .hamburger {
+  border-radius: 50%;
+  outline: 1px solid white;
+  outline-width: 3px;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  background-color: #26428b;
+  filter: opacity(40%);
+}
+
+/* line 30, ../GitHub/portfolio/scss/layout/_header.scss */
+header .burger .hamburger:hover {
+  filter: opacity(80%);
+}
+
+/* line 36, ../GitHub/portfolio/scss/layout/_header.scss */
+header nav {
+  width: 10rem;
+  outline: 1px solid #26428b;
+  overflow-x: hidden;
+  background-color: white;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+/* line 46, ../GitHub/portfolio/scss/layout/_header.scss */
+header .navbar {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+
+/* line 51, ../GitHub/portfolio/scss/layout/_header.scss */
+header .navbar * {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 56, ../GitHub/portfolio/scss/layout/_header.scss */
+header .navbar-brand {
+  border-bottom: 1px solid #26428b !important;
+}
+
+/* line 60, ../GitHub/portfolio/scss/layout/_header.scss */
+header .navbar ul {
+  list-style: none;
+  margin-top: 1rem;
+}
+
+/* line 64, ../GitHub/portfolio/scss/layout/_header.scss */
+header .navbar ul li {
+  margin-top: 1rem;
+}
+
+/* line 69, ../GitHub/portfolio/scss/layout/_header.scss */
+header .navbar .socials {
+  font-size: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+/* line 76, ../GitHub/portfolio/scss/layout/_header.scss */
+header .navbar .nav-contact {
+  border-top: 1px solid #26428b;
+  border-bottom: 1px solid #26428b;
+  padding: .5rem 0;
+  margin-top: 2rem;
+}
+
+/* line 85, ../GitHub/portfolio/scss/layout/_header.scss */
+.black-out {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+/* line 3, ../GitHub/portfolio/scss/layout/_footer.scss */
+footer #to-top .btn {
+  width: 100%;
+  color: #26428b;
+}
+
+/* line 1, ../GitHub/portfolio/scss/layout/_coming.scss */
+#coming {
+  background-color: #26428b;
+  color: white;
+  border-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100vh;
+}
+
+/* line 6, ../GitHub/portfolio/scss/layout/_coming.scss */
+#coming .container-fluid {
+  width: max-content;
+  border: 1px solid white;
+  border-radius: 2rem;
+  font-family: "Roboto Mono", monospace;
+  font-weight: 500;
+}
+
+/* line 13, ../GitHub/portfolio/scss/layout/_coming.scss */
+#coming .container-fluid h1 {
+  margin: 0;
+  padding: 1rem;
+  padding-right: 0;
+}
+
+/* line 19, ../GitHub/portfolio/scss/utilities/_mixins.scss */
+#coming .container-fluid h1::after {
+  animation: blink 1.5s step-end infinite;
+  content: "\FF5C";
+}
+
+@keyframes blink {
+  50% {
+    color: transparent;
+  }
+}
+
+/* line 5, ../GitHub/portfolio/scss/layout/_contact.scss */
+#contact-me .form .form-control,
+#contact-me .form .btn,
+#contact-me .form .thanks,
+#contact-me .form .char-count {
+  padding: .6rem;
+  margin: .5rem 0;
+  background-color: inherit;
+  border-radius: .5rem;
+  border: none;
+  outline: 1px solid #26428b;
+  color: #26428b;
+}
+
+/* line 20, ../GitHub/portfolio/scss/layout/_contact.scss */
+#contact-me .form [class*="col-12"] {
+  margin-top: auto;
+}
+
+/* line 27, ../GitHub/portfolio/scss/layout/_contact.scss */
+#contact-me .form-control::placeholder,
+#contact-me .form #message::placeholder {
+  color: rgba(38, 66, 139, 0.5);
+}
+
+/* line 32, ../GitHub/portfolio/scss/layout/_contact.scss */
+#contact-me .form .char-count,
+#contact-me .form .thanks,
+#contact-me .form .btn {
+  width: 100%;
+  text-align: center;
+}
+
+@media (max-width: 991.98px) {
+  /* line 40, ../GitHub/portfolio/scss/layout/_contact.scss */
+  #contact-me .form .char-count {
+    margin-top: 0;
+  }
+  /* line 44, ../GitHub/portfolio/scss/layout/_contact.scss */
+  #contact-me .form #message {
+    margin-bottom: 0;
+  }
+}
+
+/* line 49, ../GitHub/portfolio/scss/layout/_contact.scss */
+#contact-me .form #message {
+  overflow-y: hidden;
+}
+
+/* line 53, ../GitHub/portfolio/scss/layout/_contact.scss */
+#contact-me .form #message::placeholder {
+  opacity: 1;
+}
+
+/* line 58, ../GitHub/portfolio/scss/layout/_contact.scss */
+#contact-me .form .char-count {
+  outline: none;
+}
+
+/* line 62, ../GitHub/portfolio/scss/layout/_contact.scss */
+#contact-me .form .btn:hover,
+#contact-me .form .thanks {
+  background-color: #26428b;
+  color: white;
+  border-color: white;
+}
+
+/* line 67, ../GitHub/portfolio/scss/layout/_contact.scss */
+#contact-me .form .required {
+  background: rgba(255, 0, 0, 0.2);
+}
+
+/* line 1, ../GitHub/portfolio/scss/layout/_hero.scss */
+#hero {
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.3)), url("../img/hero.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  text-align: center;
+}
+
+/* line 10, ../GitHub/portfolio/scss/layout/_hero.scss */
+#hero * {
+  color: white;
+}
+
+/* line 14, ../GitHub/portfolio/scss/layout/_hero.scss */
+#hero .container-fluid {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* line 21, ../GitHub/portfolio/scss/layout/_hero.scss */
+#hero h1,
+#hero h2 {
+  font-family: "Roboto Mono", monospace;
+  font-weight: 500;
+}
+
+/* line 27, ../GitHub/portfolio/scss/layout/_hero.scss */
+#hero h1 {
+  font-size: 3rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* line 19, ../GitHub/portfolio/scss/utilities/_mixins.scss */
+#hero h1::after {
+  animation: blink 1.5s step-end infinite;
+  content: "\FF5C";
+}
+
+@keyframes blink {
+  50% {
+    color: transparent;
+  }
+}
+
+@media (min-width: 992px) {
+  /* line 35, ../GitHub/portfolio/scss/layout/_hero.scss */
+  #hero h1 {
+    width: max-content;
+  }
+}
+
+/* line 2, ../GitHub/portfolio/scss/layout/_introduction.scss */
+#introduction #heading {
+  border-bottom: 1px solid #26428b;
+  text-align: center;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* line 8, ../GitHub/portfolio/scss/layout/_introduction.scss */
+#introduction #heading * {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 13, ../GitHub/portfolio/scss/layout/_introduction.scss */
+#introduction #heading p {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+/* line 2, ../GitHub/portfolio/scss/layout/_languages.scss */
+#languages h2 {
+  margin-bottom: 1rem;
+}
+
+/* line 2, ../GitHub/portfolio/scss/layout/_portfolio.scss */
+#portfolio .card {
+  height: 100%;
+}
+
+/* line 2, ../GitHub/portfolio/scss/layout/_treehouse.scss */
+#treehouse figure {
+  height: 100%;
+  outline: 1px solid #26428b;
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+/* line 9, ../GitHub/portfolio/scss/layout/_treehouse.scss */
+#treehouse [class*="col-12 col-md-4"]:not(.score) {
+  margin-top: .5rem;
+}
+
+@media (max-width: 991.98px) {
+  /* line 15, ../GitHub/portfolio/scss/layout/_treehouse.scss */
+  #treehouse .score {
+    margin-top: 1.5rem;
+  }
+}
+
+/* line 19, ../GitHub/portfolio/scss/utilities/_mixins.scss */
+#examples .ex::after {
+  animation: blink 1.5s step-end infinite;
+  content: "\FF5C";
+}
+
+@keyframes blink {
+  50% {
+    color: transparent;
+  }
+}
+
+/* line 6, ../GitHub/portfolio/scss/layout/_examples.scss */
+#examples ul {
+  list-style-type: '- ';
+}
+
+/* line 10, ../GitHub/portfolio/scss/layout/_examples.scss */
+#examples figure {
+  background-color: #26428b;
+  color: white;
+  border-color: white;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border-radius: .5rem;
+}
+
+/* line 18, ../GitHub/portfolio/scss/layout/_examples.scss */
+#examples figure .img-fluid {
+  max-width: 100%;
+}
+
+/* line 22, ../GitHub/portfolio/scss/layout/_examples.scss */
+#examples figure figcaption {
+  font-style: italic;
+}
+
+/*# sourceMappingURL=styles.css.map */
