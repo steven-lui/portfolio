@@ -86,6 +86,51 @@
             <div class="container-fluid">
                 <h1>Coding Examples</h1>
                 <article>
+                    <h2>SQL - Movie Database Exercise</h2>
+                    <p>The exercises are taken from <a
+                            href="https://www.w3resource.com/sql-exercises/movie-database-exercise/subqueries-exercises-on-movie-database.php"
+                            target="_blank" rel="noopener noreferrer">w3resource</a> where we want certain records from
+                        the database.</p>
+                    <figure>
+                        <img class="img-fluid" src="img/examples/sql/movie-database.png"
+                            alt="Relation diagram of the movie database">
+                        <figcaption>This is the relation diagram of the movie database</figcaption>
+                    </figure>
+                    <p>I have made a query based off of exercise 4. From the following tables write an SQL query:</p>
+                    <ul>
+                        <li>To find movies whose reviewer is known.</li>
+                        <li>Where release date is known</li>
+                        <li>Return
+                            <ul>
+                                <li>Movie title</li>
+                                <li>Year</li>
+                                <li>Release date</li>
+                                <li>Director's name</li>
+                                <li>Actor's name</li>
+                            </ul>
+                        </li>
+                        <li>Format the output</li>
+                        <li>Order by a value (director's last name in this case)</li>
+                    </ul>
+                    <figure>
+                        <img class="img-fluid" src="img/examples/sql/code.PNG" alt="Code for my query">
+                        <figcaption>My query, written in Postgresql</figcaption>
+                    </figure>
+                    <p>My query gets the required data from tables that I have use JOIN clauses on, which lets me attach
+                        multiple pieces of data together by a movie's id. I also use subqueries in certain areas, for
+                        example the first join. In this case, I wanted the movies which have a specific release date, as
+                        some of them lack it. I wanted to use the WITH clause, however the online editor did not accept
+                        such queries from my testing.</p>
+                    <figure>
+                        <img class="img-fluid" src="img/examples/sql/sql.PNG" alt="Results from my query">
+                        <figcaption>Here is what my query returned, using the online editor</figcaption>
+                    </figure>
+                    <p>It is important to note that by using a WITH clause would make the query much more readable.
+                        Having easy to read code is important because quite often multiple people will end up using and
+                        maintaining your code. With all the code you may write, its important that you can understand it
+                        quickly in case you forget!</p>
+                </article>
+                <article>
                     <h2 class="typewriter ex">typewriter.js</h2>
                     <ul>
                         <li>This is code I use for the typewriter effect, written in Javascript</li>
