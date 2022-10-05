@@ -1,3 +1,2 @@
 # Ignore docs files
-.sass-cache
-.sass-cache/*
+css/bootstrap-5.2.0
