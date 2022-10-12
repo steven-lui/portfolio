@@ -37,7 +37,7 @@ header {
         width: $nav-width;
         outline: $border-primary;
         overflow-x: hidden;
-        background-color: $background;
+        background-color: white;
         height: 100%;
         top: 0;
         left: 0;
@@ -55,7 +55,7 @@ header {
         }
 
         &-brand {
-            border-bottom: $border-primary  !important;
+            border-bottom: $border-primary !important;
         }
 
         ul {
