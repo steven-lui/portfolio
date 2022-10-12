@@ -1,39 +1,66 @@
 #hero {
-    background-image: linear-gradient(to right, rgba(black, .8), rgba(black, .3)),
-        url("../img/hero.webp");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
     height: 100vh;
     text-align: center;
 
+    // components
+    .hero {
+        &__text {
+            // set typeface
+            font-family: $font-family-mono;
+            font-weight: getFontWeight(md);
+
+            // center to screen
+            position: absolute;
+
+            // center
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            // title
+            h1 {
+                font-size: 3rem;
+
+                // typewriter
+                margin-left: auto;
+                margin-right: auto;
+                @include blink-carat(white);
+            }
+        }
+
+        &__image {
+            // size to fit the screen
+            height: calc(100% + 40px);
+            margin: -20px;
+
+            // relative/absolute workaround
+            position: relative;
+
+            // image
+            background-image: linear-gradient(to right, rgba(black, .8), rgba(black, .3)),
+                url("../img/hero.webp");
+
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+
+            filter: blur(10px);
+        }
+
+        &__button {
+            // fix to bottom
+            position: absolute;
+            bottom: 0;
+
+            // center
+            transform: translateX(-50%);
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    // sets fonts AND button border
     * {
         color: white;
-    }
-
-    .container-fluid {
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
-
-    h1,
-    h2 {
-        font-family: $font-family-mono;
-        font-weight: getFontWeight(md);
-    }
-
-    h1 {
-        font-size: 3rem;
-        margin-left: auto;
-        margin-right: auto;
-        @include blink-carat(white);
-    }
-
-    @include media-breakpoint-up(lg) {
-        h1 {
-            width: max-content;
-        }
     }
 }
