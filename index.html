@@ -8,20 +8,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Steven Lui is training to be a full stack developer with by Netmatters, with skills in web development and database management">
 
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <title>Steven Lui&#xFF5C;Web Developer</title>
 
     <!-- BOOTSTRAP CSS -->
     <link rel="stylesheet" href="css/bootstrap-5.2.0/bootstrap.css">
 
-    <!-- NORMALISE CSS -->
-    <link rel="stylesheet" href="css/normalize.css">
-
     <!-- GOOGLE FONT -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500%26family=Roboto:wght@300;500;700;900%26display=swap"
-        type="text/css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&family=Roboto:wght@300;500;700;900&display=swap"
+        rel="stylesheet">
 
     <!-- CUSTOM CSS -->
     <link rel="stylesheet" href="css/styles.css">
@@ -41,7 +39,7 @@
 
         <nav class="d-none d-lg-block">
             <div class="navbar">
-                <a href="index.html" class="navbar-brand"><img class="img-fluid" src="img/logo.png" alt="Logo"></a>
+                <a href="index.html" class="navbar-brand"><img class="img-fluid" src="img/logo.webp" alt="Logo"></a>
                 <div class="navbar-nav">
                     <ul>
                         <li><span class="hvr-overline-from-right">
@@ -84,19 +82,17 @@
 
     <main>
         <section id="hero" aria-label="Background image by Kevin Laminto">
-            <div class="container-fluid">
-                <div></div>
-                <div>
-                    <h1 class="typewriter">My name is Steven Lui</h1>
-                    <h2>I'm a Web Developer</h2>
-                </div>
-
-                <a href="#portfolio" class="btn">
-                    Scroll Down
-                    <br>
-                    <i class="fa-solid fa-angle-down"></i>
-                </a>
+            <div class="hero__image"></div>
+            <div class="hero__text">
+                <h1 class="typewriter">My name is Steven Lui</h1>
+                <h2>I'm a Web Developer</h2>
             </div>
+
+            <a href="#portfolio" class="btn hero__button">
+                Scroll Down
+                <br>
+                <i class="fa-solid fa-angle-down"></i>
+            </a>
         </section>
 
         <section id="portfolio">
@@ -104,7 +100,7 @@
                 <div class="row gy-4 justify-content-center">
                     <div class="col-12 col-md-6 col-xxl-4">
                         <div class="card">
-                            <img src="img/projects/netmatters.PNG" class="card-img-top" alt="Placeholder">
+                            <img src="img/projects/netmatters.webp" class="card-img-top" alt="Placeholder">
                             <div class="card-body">
                                 <h5 class="card-title">Netmatters Reflection</h5>
                                 <p class="card-text">This project was to recreate the Netmatters homepage with HTML and
@@ -124,14 +120,13 @@
 
                     <div class="col-12 col-md-6 col-xxl-4">
                         <div class="card">
-                            <img src="img/projects/portfolio-2022-07-21-10_05_56.png" class="card-img-top"
-                                alt="Portfolio">
+                            <img src="img/projects/portfolio.webp" class="card-img-top" alt="Portfolio">
                             <div class="card-body">
                                 <h5 class="card-title">Portfolio</h5>
                                 <p class="card-text">Yes, even this site! I'm doing as much as I can to make this site
                                     accessible to all, whilst showcasing my skills.</p>
                                 <div class="links">
-                                    <a href="index.html">View Project<i class="fa-solid fa-arrow-right"></i></a>
+                                    <a href="#">View Project<i class="fa-solid fa-arrow-right"></i></a>
                                     <br>
                                     <a href="https://github.com/steven-lui/steven-lui.github.io/" target="_blank"
                                         rel="noopener noreferrer">View Repository<i
@@ -142,7 +137,7 @@
                     </div>
                     <div class="col-12 col-md-6 col-xxl-4">
                         <div class="card">
-                            <img src="img/projects/placeholder.png" class="card-img-top" alt="Placeholder">
+                            <img src="img/projects/placeholder.webp" class="card-img-top" alt="Placeholder">
                             <div class="card-body">
                                 <h5 class="card-title">Placeholder</h5>
                                 <p class="card-text">Macaroon biscuit croissant toffee gingerbread tootsie roll sugar
@@ -230,7 +225,7 @@
     <!-- /// JS ///-->
     <script src="https://kit.fontawesome.com/df396576ab.js" crossorigin="anonymous"></script>
     <script src="js/bootstrap-5.2.0/bootstrap.min.js"></script>
-    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script src="js/typewriter.js"></script>
     <script src="js/navbar.js"></script>
     <script src="js/contactform.js"></script>
