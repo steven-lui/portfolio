@@ -40,7 +40,7 @@ function update_sections(scroll_dir) {
                 break;
             // page start
             default:
-                display_section(this, bot <= $(window).height());
+                display_section(this, top < $(window).height());
                 break;
         }
     });
@@ -61,15 +61,19 @@ function display_section(section, show) {
 // page ready
 $(document).ready(function () {
     // set position to top
-    $(window).scrollTop(0);
+    $(window)
+        .scrollTop(0)
+        .promise()
+        .done(function () {
+            // one time check to make sections visible on page load
+            update_sections(0);
+        }
+        );
 
     // last recorded position on the page
     var lastPos = 0;
     // scroll direction, up is positive
     var scroll_dir = 0;
-
-    // one time check to make sections visible on page load
-    update_sections(0);
 
     // on page scroll
     $(window).scroll(function () {
