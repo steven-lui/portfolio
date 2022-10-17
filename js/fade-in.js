@@ -16,6 +16,7 @@ function update_sections() {
 
         /**
          * Check if all of the item is not in the threshold
+         *  If it isn't, then you can assume the item IS in the threshold
          */
         ((top > bot_threshold && bot > bot_threshold) || (top < top_threshold && bot < top_threshold)) ?
             $(this).stop(true).animate({ 'opacity': '0' }, 500) : // show if true
