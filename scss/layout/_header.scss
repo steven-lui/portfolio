@@ -37,7 +37,7 @@ header {
         width: $nav-width;
         outline: $border-primary;
         overflow-x: hidden;
-        background-color: $background;
+        background-color: white;
         height: 100%;
         top: 0;
         left: 0;
@@ -45,6 +45,7 @@ header {
 
     .navbar {
         display: flex;
+        flex-direction: column;
         text-align: center;
         justify-content: center;
 
@@ -54,7 +55,7 @@ header {
         }
 
         &-brand {
-            border-bottom: $border-primary  !important;
+            border-bottom: $border-primary !important;
         }
 
         ul {
