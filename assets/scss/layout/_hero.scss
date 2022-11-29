@@ -14,8 +14,7 @@
 
             // center
             top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
+            transform: translateY(-50%);
 
             // title
             h1 {
@@ -25,6 +24,11 @@
                 margin-left: auto;
                 margin-right: auto;
                 @include blink-carat(white);
+            }
+
+            &_wrapper {
+                display: flex;
+                justify-content: space-around;
             }
         }
 
