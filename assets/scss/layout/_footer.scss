@@ -1,8 +1,8 @@
-footer {
-    #to-top {
-        .btn {
-            width: 100%;
-            color: $primary;
-        }
+footer #to-top .btn {
+    width: 100%;
+    color: $primary;
+
+    i {
+        display: block;
     }
 }
