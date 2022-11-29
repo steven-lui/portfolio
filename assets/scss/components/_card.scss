@@ -1,5 +1,8 @@
 .card {
     outline: $border-primary;
+    max-width: 350px;
+    margin: 0 auto;
+    height: auto;
 
     &-img-top {
         object-fit: cover;
@@ -11,7 +14,7 @@
     }
 
     &-text {
-        margin-bottom: 0;
+        margin-bottom: auto;
     }
 
     &-body {
@@ -28,15 +31,19 @@
         }
 
         .links {
-            margin-top: auto;
             line-height: 2em;
 
             i {
                 margin-left: .5em;
             }
 
-            a:hover {
-                border-bottom: $border-primary;
+            a {
+                display: block;
+                width: max-content;
+
+                &:hover {
+                    border-bottom: $border-primary;
+                }
             }
         }
     }
