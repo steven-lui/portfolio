@@ -128,9 +128,11 @@ function resetForm() {
 
 //https://stackoverflow.com/questions/16452699/how-to-reset-a-form-using-jquery-with-reset-method
 $(function () {
-    resetForm();
-    //this is not in reset form as the banner will immediately hide otherwise
-    $(".thanks").hide();
+    if ($(".form").length) {
+        resetForm();
+        //this is not in reset form as the banner will immediately hide otherwise
+        $(".thanks").hide();
+    }
 
     // test values
     // $(".form #fname").val("Steven");
