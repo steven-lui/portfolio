@@ -4,7 +4,7 @@
 
     // components
     .hero {
-        &__text {
+        &_text {
             // set typeface
             font-family: $font-family-mono;
             font-weight: getFontWeight(md);
@@ -32,7 +32,7 @@
             }
         }
 
-        &__image {
+        &_image {
             // size to fit the screen
             height: calc(100% + 40px);
             margin: -20px;
@@ -51,7 +51,7 @@
             filter: blur(10px);
         }
 
-        &__button {
+        &_button {
             // fix to bottom
             position: absolute;
             bottom: 0;
