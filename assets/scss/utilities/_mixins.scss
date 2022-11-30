@@ -9,8 +9,8 @@
 
 @mixin inverted-colors {
     background-color: $primary;
-    color: $background;
-    border-color: $background;
+    color: #fff;
+    border-color: #fff;
 
     @content;
 }

@@ -5,6 +5,14 @@
  */
 function error_text(field, text) {
     $(`#${field}_error`).text(text);
+
+    // on error, make the field red
+    if (text != "") {
+        $(`#${field}`).addClass('required');
+    }
+    else {
+        $(`#${field}`).removeClass('required');
+    }
 }
 
 let valid_fields = [];
@@ -34,22 +42,22 @@ function validate_name(field) {
     }
 }
 
-function validate_email(field) {
-    value = $(`#${field}`).val();
+function validate_email() {
+    value = $(`#email`).val();
     // check for any data
     if (value == "") {
-        valid_fields[field] = false;
-        error_text(field, "Please complete this field");
+        valid_fields['email'] = false;
+        error_text('email', "Please complete this field");
     }
     // special characters
     else if (!value.match(/[A-Za-z0-9@]+$/)) {
-        valid_fields[field] = false;
-        error_text(field, "No special characters");
+        valid_fields['email'] = false;
+        error_text('email', "No special characters");
     }
     // @
     else if (!value.match(/^[^@]+@[^@]+$/)) {
-        valid_fields[field] = false;
-        error_text(field, "Must include only one @");
+        valid_fields['email'] = false;
+        error_text('email', "Must include only one @");
     }
     // split by @
     else {
@@ -58,19 +66,19 @@ function validate_email(field) {
         let domain = chunks[1];
         // username
         if (!username.match(/[A-Za-z0-9]+$/)) {
-            valid_fields[field] = false;
-            error_text(field, "Please check the first part of your email");
+            valid_fields['email'] = false;
+            error_text('email', "Please check the first part of your email");
         }
         // domain
         // https://stackoverflow.com/questions/21173734/extracting-top-level-and-second-level-domain-from-a-url-using-regex
         else if (!domain.match(/[^.]*\.[^.]{2,3}(?:\.[^.]{2,3})?$/)) {
-            valid_fields[field] = false;
-            error_text(field, "Please check the second part of your email");
+            valid_fields['email'] = false;
+            error_text('email', "Please check the second part of your email");
         }
         // valid
         else {
-            valid_fields[field] = true;
-            error_text(field, "");
+            valid_fields['email'] = true;
+            error_text('email', "");
         }
     }
 }

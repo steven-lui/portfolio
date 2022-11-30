@@ -7605,8 +7605,8 @@ footer #to-top .btn i {
 
 #coming {
   background-color: #26428b;
-  color: linear-gradient(rgba(255, 165, 0, 0.3), rgba(128, 0, 128, 0.2));
-  border-color: linear-gradient(rgba(255, 165, 0, 0.3), rgba(128, 0, 128, 0.2));
+  color: #fff;
+  border-color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -7635,6 +7635,10 @@ footer #to-top .btn i {
   }
 }
 
+#contact-me .form {
+  font-size: 0.6;
+  color: red;
+}
 #contact-me .form .form-control,
 #contact-me .form .btn,
 #contact-me .form .thanks,
@@ -7680,8 +7684,8 @@ footer #to-top .btn i {
 #contact-me .form .btn:hover,
 #contact-me .form .thanks {
   background-color: #26428b;
-  color: linear-gradient(rgba(255, 165, 0, 0.3), rgba(128, 0, 128, 0.2));
-  border-color: linear-gradient(rgba(255, 165, 0, 0.3), rgba(128, 0, 128, 0.2));
+  color: #fff;
+  border-color: #fff;
 }
 #contact-me .form .required {
   background: rgba(255, 0, 0, 0.2);
@@ -7794,8 +7798,8 @@ footer #to-top .btn i {
 }
 #examples figure {
   background-color: #26428b;
-  color: linear-gradient(rgba(255, 165, 0, 0.3), rgba(128, 0, 128, 0.2));
-  border-color: linear-gradient(rgba(255, 165, 0, 0.3), rgba(128, 0, 128, 0.2));
+  color: #fff;
+  border-color: #fff;
   align-items: center;
   margin-bottom: 1rem;
   padding: 1rem;
