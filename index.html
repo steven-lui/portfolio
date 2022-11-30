@@ -246,29 +246,40 @@
                     </div>
 
                     <div class="col">
-                        <form class="form" id="contact-form">
+                        <!-- http://talkerscode.com/webtricks/form-validation-using-jquery.php -->
+                        <form class="form" id="contact-form" method="POST" action="senddata.php"
+                            onsubmit="return validate();">
                             <div class="row">
                                 <div class="col-12 col-lg-6">
-                                    <input type="text" class="form-control" id="fname" placeholder="First Name*">
+                                    <input type="text" class="form-control" id="fname" placeholder="First Name"
+                                        onblur="validate_name('fname');">
+                                    <span id="fname_error"></span>
                                 </div>
                                 <div class="col-12 col-lg-6">
-                                    <input type="text" class="form-control" id="sname" placeholder="Last Name*">
+                                    <input type="text" class="form-control" id="sname" placeholder="Last Name"
+                                        onblur="validate_name('sname');">
+                                    <span id="sname_error"></span>
                                 </div>
                                 <div class="col-12">
-                                    <input type="text" class="form-control" id="email" placeholder="Email Address*">
+                                    <input type="text" class="form-control" id="email" placeholder="Email Address"
+                                        onblur="validate_email();">
+                                    <span id="email_error"></span>
                                 </div>
                                 <div class="col-12">
-                                    <input type="text" class="form-control" id="subject" placeholder="Subject">
+                                    <input type="text" class="form-control" id="subject" placeholder="Subject"
+                                        onblur="validate_text('subject');">
+                                    <span id="subject_error"></span>
                                 </div>
                                 <div class="col-12">
                                     <textarea name="message" class="form-control" id="message" maxlength="300"
-                                        placeholder="Message"></textarea>
+                                        placeholder="Message" onblur="validate_text('message');"></textarea>
+                                    <span id="message_error"></span>
                                 </div>
                                 <div class="col-12 col-lg order-lg-last">
                                     <label for="message" class="char-count"></label>
                                 </div>
                                 <div class="col-12 col-lg">
-                                    <button type="button" class="btn" onclick="sendForm()" form="contact-form">
+                                    <button type="button" class="btn" type="submit" value="SUBMIT" form="contact-form">
                                         Submit
                                     </button>
                                 </div>
