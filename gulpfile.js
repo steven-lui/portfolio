@@ -7,18 +7,16 @@ const uglifycss = require('gulp-uglifycss');
 const uglify = require('gulp-uglify-es').default;
 var concat = require('gulp-concat');
 
-const jsFiles = ['assets/js/contactform.js', 'assets/js/fade-in.js', 'assets/js/navbar.js', 'assets/js/typewriter.js'];
-
 //GENERATE
 function generateSASS() {
     return src('assets/scss/**/*.scss')
         .pipe(sass().on('error', sass.logError)) //compile
-        .pipe(uglifycss({ "uglyComments": true })) //uglify
+        // .pipe(uglifycss({ "uglyComments": true })) //uglify
         .pipe(dest('assets/css'));//pipe
 }
 
 function generateJS() {
-    return src(jsFiles)
+    return src(['assets/js/**/*', '!assets/js/**/*.min.js'])
         .pipe(concat('all.min.js'))
         .pipe(dest('assets/js'));
 }
@@ -26,7 +24,7 @@ function generateJS() {
 /** Uglify all.js */
 function uglifyJS() {
     return src('assets/js/all.min.js')
-        .pipe(uglify()) //uglify
+        // .pipe(uglify()) //uglify
         .pipe(dest('assets/js'));
 }
 
