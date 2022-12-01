@@ -247,8 +247,8 @@
 
                     <div class="col">
                         <!-- http://talkerscode.com/webtricks/form-validation-using-jquery.php -->
-                        <form class="form" id="contact-form" method="POST" action="senddata.php"
-                            onsubmit="return validate();">
+                        <!-- TODO PHP -->
+                        <form class="form" action="#" id="contact-form" onsubmit="return validate_form();">
                             <div class="row">
                                 <div class="col-12 col-lg-6">
                                     <input type="text" class="form-control" id="fname" placeholder="First Name"
@@ -279,7 +279,7 @@
                                     <label for="message" class="char-count"></label>
                                 </div>
                                 <div class="col-12 col-lg">
-                                    <button type="button" class="btn" type="submit" value="SUBMIT" form="contact-form">
+                                    <button class="btn" type="submit">
                                         Submit
                                     </button>
                                 </div>
