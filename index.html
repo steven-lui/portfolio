@@ -20,7 +20,7 @@
         rel="stylesheet">
 
     <!-- CUSTOM CSS -->
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 
 <body>
@@ -37,40 +37,76 @@
 
         <nav class="d-none d-lg-block">
             <div class="navbar">
-                <a href="index.html" class="navbar-brand"><img class="img-fluid" src="img/logo.webp" alt="Logo"></a>
+                <a href="index.html" class="navbar-brand">
+                    <img class="img-fluid" src="assets/img/logo.webp" alt="Logo">
+                </a>
                 <div class="navbar-nav">
                     <ul>
-                        <li><span class="hvr-overline-from-right">
-                                <span class="hvr-underline-from-left"><a href="about.html" class="nav-item">About
-                                        Me</a></span></span></li>
-                        <li><span class="hvr-overline-from-right">
-                                <span class="hvr-underline-from-left"><a href="index.html#portfolio" class="nav-item">My
-                                        Portfolio</a></span></span></li>
-                        <li><span class="hvr-overline-from-right">
-                                <span class="hvr-underline-from-left"><a href="examples.html" class="nav-item">Coding
-                                        Examples</a></span></span></li>
-                        <li><span class="hvr-overline-from-right">
-                                <span class="hvr-underline-from-left"><a href="scs.html" class="nav-item">SCS
-                                        Scheme</a></span></span></li>
+                        <li>
+                            <span class="hvr-overline-from-right">
+                                <span class="hvr-underline-from-left">
+                                    <a href="about.html" class="nav-item">
+                                        About Me
+                                    </a>
+                                </span>
+                            </span>
+                        </li>
+                        <li>
+                            <span class="hvr-overline-from-right">
+                                <span class="hvr-underline-from-left">
+                                    <a href="index.html#portfolio" class="nav-item">
+                                        My Portfolio
+                                    </a>
+                                </span>
+                            </span>
+                        </li>
+                        <li>
+                            <span class="hvr-overline-from-right">
+                                <span class="hvr-underline-from-left">
+                                    <a href="examples.html" class="nav-item">
+                                        Coding Examples
+                                    </a>
+                                </span>
+                            </span>
+                        </li>
+                        <li>
+                            <span class="hvr-overline-from-right">
+                                <span class="hvr-underline-from-left">
+                                    <a href="scs.html" class="nav-item">
+                                        SCS Scheme
+                                    </a>
+                                </span>
+                            </span>
+                        </li>
                     </ul>
                     <div class="nav-contact">
                         <span class="hvr-overline-from-right">
-                            <span class="hvr-underline-from-left"><a href="index.html#contact-me"
-                                    class="nav-item">Contact Me</a></span></span>
+                            <span class="hvr-underline-from-left">
+                                <a href="index.html#contact-me" class="nav-item">
+                                    Contact Me
+                                </a>
+                            </span>
+                        </span>
                     </div>
                     <ul class="socials">
                         <li>
                             <span class="hvr-overline-from-right">
                                 <span class="hvr-underline-from-left">
                                     <a class="nav-item" href="https://www.linkedin.com/in/steven-lui-332965245"
-                                        target="_blank" rel="noopener noreferrer"><i
-                                            class="fa-brands fa-linkedin"></i></a></span></span>
+                                        target="_blank" rel="noopener noreferrer">
+                                        <i class="fa-brands fa-linkedin"></i>
+                                    </a>
+                                </span>
+                            </span>
                         </li>
                         <li>
                             <span class="hvr-overline-from-right">
                                 <span class="hvr-underline-from-left">
-                                    <a href="https://github.com/steven-lui/" target="_blank"
-                                        rel="noopener noreferrer"><i class="fa-brands fa-github"></i></a></span></span>
+                                    <a href="https://github.com/steven-lui/" target="_blank" rel="noopener noreferrer">
+                                        <i class="fa-brands fa-github"></i>
+                                    </a>
+                                </span>
+                            </span>
                         </li>
                     </ul>
                 </div>
@@ -80,74 +116,97 @@
 
     <main>
         <section id="hero" aria-label="Background image by Kevin Laminto">
-            <div class="hero__image"></div>
-            <div class="hero__text">
-                <h1 class="typewriter">My name is Steven Lui</h1>
-                <h2>I'm a Web Developer</h2>
+            <div class="hero_image"></div>
+            <div class="hero_text_wrapper">
+                <div class="hero_text">
+                    <h1 class="typewriter">
+                        My name is Steven Lui
+                    </h1>
+                    <h2>
+                        I'm a Web Developer
+                    </h2>
+                </div>
             </div>
-
-            <a href="#portfolio" class="btn hero__button">
-                Scroll Down
-                <br>
-                <i class="fa-solid fa-angle-down"></i>
+            <a href="#portfolio" class="btn hero_button">
+                Scroll Down<i class="fa-solid fa-angle-down"></i>
             </a>
         </section>
 
         <section id="portfolio">
             <div class="container-fluid">
-                <div class="row gy-4 justify-content-center">
-                    <div class="col-12 col-md-6 col-xxl-4">
-                        <div class="card">
-                            <img src="img/projects/netmatters.webp" class="card-img-top" alt="Placeholder">
-                            <div class="card-body">
-                                <h5 class="card-title">Netmatters Reflection</h5>
-                                <p class="card-text">This project was to recreate the Netmatters homepage with HTML and
-                                    Sass. Responsive design and cross-browser compatibility were very important.</p>
-                                <div class="links">
-                                    <a href="http://netmatters.steven-lui.netmatters-scs.co.uk/" target="_blank"
-                                        rel="noopener noreferrer">View Project<i
-                                            class="fa-solid fa-arrow-right"></i></a>
-                                    <br>
-                                    <a href="https://github.com/steven-lui/portfolio/" target="_blank"
-                                        rel="noopener noreferrer">View Repository<i
-                                            class="fa-solid fa-arrow-right"></i></a>
-                                </div>
+                <div class="card_list">
+                    <!-- <div class="row gy-4 justify-content-center"> -->
+                    <!-- <div class="col-12 col-md-6 col-xl-4"> -->
+                    <div class="card">
+                        <img src="assets/img/projects/netmatters.webp" class="card-img-top" alt="Netmatters Reflection">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                Netmatters Reflection
+                            </h5>
+                            <p class="card-text">
+                                This project was to recreate the Netmatters homepage with HTML and
+                                Sass. Responsive design and cross-browser compatibility were very important.
+                            </p>
+                            <div class="links">
+                                <a href="http://netmatters.steven-lui.netmatters-scs.co.uk/" target="_blank"
+                                    rel="noopener noreferrer">
+                                    View Project<i class="fa-solid fa-arrow-right"></i>
+                                </a>
+                                <a href="https://github.com/steven-lui/portfolio/" target="_blank"
+                                    rel="noopener noreferrer">
+                                    View Repository<i class="fa-solid fa-arrow-right"></i>
+                                </a>
                             </div>
                         </div>
                     </div>
-
-                    <div class="col-12 col-md-6 col-xxl-4">
-                        <div class="card">
-                            <img src="img/projects/portfolio.webp" class="card-img-top" alt="Portfolio">
-                            <div class="card-body">
-                                <h5 class="card-title">Portfolio</h5>
-                                <p class="card-text">Yes, even this site! I'm doing as much as I can to make this site
-                                    accessible to all, whilst showcasing my skills.</p>
-                                <div class="links">
-                                    <a href="#">View Project<i class="fa-solid fa-arrow-right"></i></a>
-                                    <br>
-                                    <a href="https://github.com/steven-lui/steven-lui.github.io/" target="_blank"
-                                        rel="noopener noreferrer">View Repository<i
-                                            class="fa-solid fa-arrow-right"></i></a>
-                                </div>
+                    <!-- </div>
+                    <div class="col-12 col-md-6 col-xl-4"> -->
+                    <div class="card">
+                        <img src="assets/img/projects/jsarray.webp" class="card-img-top" alt="Javascript Array">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                Javascript Array Reflection
+                            </h5>
+                            <p class="card-text">
+                                This project was to create a random image generator, using an image
+                                library. You could then assign certain images to a validated email address.
+                            </p>
+                            <div class="links">
+                                <a href="http://steven-lui.netmatters-scs.co.uk/javascript-array" target="_blank"
+                                    rel="noopener noreferrer">
+                                    View Project<i class="fa-solid fa-arrow-right"></i>
+                                </a>
+                                <a href="https://github.com/steven-lui/javascript-array-reflection" target="_blank"
+                                    rel="noopener noreferrer">
+                                    View Repository<i class="fa-solid fa-arrow-right"></i>
+                                </a>
                             </div>
                         </div>
                     </div>
-                    <div class="col-12 col-md-6 col-xxl-4">
-                        <div class="card">
-                            <img src="img/projects/placeholder.webp" class="card-img-top" alt="Placeholder">
-                            <div class="card-body">
-                                <h5 class="card-title">Placeholder</h5>
-                                <p class="card-text">Macaroon biscuit croissant toffee gingerbread tootsie roll sugar
-                                    plum powder.</p>
-                                <div class="links">
-                                    <a>View Project<i class="fa-solid fa-arrow-right"></i></a>
-                                    <br>
-                                    <a>View Repository<i class="fa-solid fa-arrow-right"></i></a>
-                                </div>
+                    <!-- </div>
+                    <div class="col-12 col-md-6 col-xl-4"> -->
+                    <div class="card">
+                        <img src="assets/img/projects/placeholder.webp" class="card-img-top" alt="Placeholder">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                Placeholder
+                            </h5>
+                            <p class="card-text">
+                                Chupa chups sugar plum apple pie lollipop cake jelly beans. Bear claw gummies muffin
+                                cheesecake candy canes. Marshmallow caramels cookie tiramisu biscuit bonbon.
+                            </p>
+                            <div class="links">
+                                <a>
+                                    View Project<i class="fa-solid fa-arrow-right"></i>
+                                </a>
+                                <a>
+                                    View Repository<i class="fa-solid fa-arrow-right"></i>
+                                </a>
                             </div>
                         </div>
                     </div>
+                    <!-- </div> -->
+                    <!-- </div> -->
                 </div>
             </div>
         </section>
@@ -156,46 +215,73 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-12 col-lg-4">
-                        <h2>Get In Touch</h2>
-                        <p>If you want to get in touch, please use my phone number or through my email.
+                        <h2>
+                            Get In Touch
+                        </h2>
+                        <p>
+                            If you want to get in touch, please use my phone number or through my email.
                             Using the form will send me an email.
                         </p>
                         <h3>
-                            <span class="hvr-overline-from-right"><span class="hvr-underline-from-left"><a
-                                        href="tel:+447759262982">Telephone</a></span></span>
+                            <span class="hvr-overline-from-right">
+                                <span class="hvr-underline-from-left">
+                                    <a href="tel:+447759262982">
+                                        Telephone
+                                    </a>
+                                </span>
+                            </span>
                         </h3>
                         <h3>
-                            <span class="hvr-overline-from-right"><span class="hvr-underline-from-left"><a
-                                        href="mailto:steven.lui@netmatters-scs.com">Email</a></span></span>
+                            <span class="hvr-overline-from-right">
+                                <span class="hvr-underline-from-left">
+                                    <a href="mailto:steven.lui@netmatters-scs.com">
+                                        Email
+                                    </a>
+                                </span>
+                            </span>
                         </h3>
-                        <p>You can expect a response to all enquires within 3 working days between 9 AM and 5 PM GMT</p>
+                        <p>
+                            You can expect a response to all enquires within 3 working days between 9 AM and 5 PM GMT
+                        </p>
                     </div>
 
                     <div class="col">
-                        <form class="form" id="contact-form">
+                        <!-- http://talkerscode.com/webtricks/form-validation-using-jquery.php -->
+                        <!-- TODO PHP -->
+                        <form class="form" action="#" id="contact-form" onsubmit="return validate_form();">
                             <div class="row">
                                 <div class="col-12 col-lg-6">
-                                    <input type="text" class="form-control" id="fname" placeholder="First Name*">
+                                    <input type="text" class="form-control" id="fname" placeholder="First Name"
+                                        onblur="validate_name('fname');">
+                                    <span id="fname_error"></span>
                                 </div>
                                 <div class="col-12 col-lg-6">
-                                    <input type="text" class="form-control" id="sname" placeholder="Last Name*">
+                                    <input type="text" class="form-control" id="sname" placeholder="Last Name"
+                                        onblur="validate_name('sname');">
+                                    <span id="sname_error"></span>
                                 </div>
                                 <div class="col-12">
-                                    <input type="text" class="form-control" id="email" placeholder="Email Address*">
+                                    <input type="text" class="form-control" id="email" placeholder="Email Address"
+                                        onblur="validate_email();">
+                                    <span id="email_error"></span>
                                 </div>
                                 <div class="col-12">
-                                    <input type="text" class="form-control" id="subject" placeholder="Subject">
+                                    <input type="text" class="form-control" id="subject" placeholder="Subject"
+                                        onblur="validate_text('subject');">
+                                    <span id="subject_error"></span>
                                 </div>
                                 <div class="col-12">
                                     <textarea name="message" class="form-control" id="message" maxlength="300"
-                                        placeholder="Message"></textarea>
+                                        placeholder="Message" onblur="validate_text('message');"></textarea>
+                                    <span id="message_error"></span>
                                 </div>
                                 <div class="col-12 col-lg order-lg-last">
                                     <label for="message" class="char-count"></label>
                                 </div>
                                 <div class="col-12 col-lg">
-                                    <button type="button" class="btn" onclick="sendForm()"
-                                        form="contact-form">Submit</button>
+                                    <button class="btn" type="submit">
+                                        Submit
+                                    </button>
                                 </div>
                                 <div class="col-12 col-lg">
                                     <div class="thanks"></div>
@@ -212,9 +298,7 @@
         <div id="to-top">
             <div class="container-fluid">
                 <a href="#" class="btn">
-                    <i class="fa-solid fa-angle-up"></i>
-                    <br>
-                    Back To Top
+                    <i class="fa-solid fa-angle-up"></i>Back To Top
                 </a>
             </div>
         </div>
@@ -223,10 +307,7 @@
     <!-- /// JS ///-->
     <script src="https://kit.fontawesome.com/df396576ab.js" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-    <script src="js/typewriter.js"></script>
-    <script src="js/navbar.js"></script>
-    <script src="js/contactform.js"></script>
-    <script src="js/fade-in.js"></script>
+    <script src="assets/js/all.min.js"></script>
 </body>
 
 </html>

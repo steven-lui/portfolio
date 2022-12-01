@@ -1,0 +1,74 @@
+#hero {
+    height: 100vh;
+    text-align: center;
+
+    // components
+    .hero {
+        &_text {
+            // set typeface
+            font-family: $font-family-mono;
+            font-weight: getFontWeight(md);
+
+            // center to screen
+            position: absolute;
+
+            // center
+            top: 50%;
+            transform: translateY(-50%);
+
+            // title
+            h1 {
+                font-size: 3rem;
+
+                // typewriter
+                margin-left: auto;
+                margin-right: auto;
+                @include blink-carat(white);
+            }
+
+            &_wrapper {
+                display: flex;
+                justify-content: space-around;
+            }
+        }
+
+        &_image {
+            // size to fit the screen
+            height: calc(100% + 40px);
+            margin: -20px;
+
+            // relative/absolute workaround
+            position: relative;
+
+            // image
+            background-image: linear-gradient(to right, rgba(black, .8), rgba(black, .3)),
+                url("../img/hero.webp");
+
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+
+            filter: blur(10px);
+        }
+
+        &_button {
+            // fix to bottom
+            position: absolute;
+            bottom: 0;
+
+            // center
+            transform: translateX(-50%);
+            margin-left: auto;
+            margin-right: auto;
+
+            i {
+                display: block;
+            }
+        }
+    }
+
+    // sets fonts AND button border
+    * {
+        color: white;
+    }
+}

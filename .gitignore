@@ -1,3 +1,3 @@
 # Ignore docs files
-css/bootstrap-5.2.0/*
-css/bootstrap-5.2.0
+node_modules
+node_modules/*
