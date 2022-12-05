@@ -29,6 +29,11 @@ function validate_name(field) {
         valid_fields[field] = false;
         error_text(field, "Please complete this field");
     }
+    // whitespace at the start
+    else if (value.match(/^\s.*$/mg)) {
+        valid_fields[field] = false;
+        error_text(field, "Please start with letters or numbers");
+    }
     // check for special characters
     //https://www.regextester.com/93648
     else if (!value.match(/^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*)*$/)) {
@@ -49,49 +54,52 @@ function validate_email() {
         valid_fields['email'] = false;
         error_text('email', "Please complete this field");
     }
-    // special characters
-    else if (!value.match(/[A-Za-z0-9@]+$/)) {
+    // whitespace
+    else if (value.match(/[ ]+/)) {
         valid_fields['email'] = false;
-        error_text('email', "No special characters");
+        error_text('email', "No spaces please");
+    }
+    // special characters
+    else if (!value.match(/[A-Za-z0-9@_\.\-]+$/)) {
+        valid_fields['email'] = false;
+        error_text('email', "No special characters please");
     }
     // @
     else if (!value.match(/^[^@]+@[^@]+$/)) {
         valid_fields['email'] = false;
-        error_text('email', "Must include only one @");
+        error_text('email', "Emails must be in the format name@email.com");
     }
-    // split by @
+    // _-. must be followed by letter/number
+    else if (!value.match(/^[A-Za-z0-9]+([_\.\-][A-Za-z0-9]+)*@[A-Za-z0-9]+([_\.\-][A-Za-z0-9]+)*$/)) {
+        valid_fields['email'] = false;
+        error_text('email', "Underscores, dashes and periods must have following letters or numbers")
+    }
+    // check the domain
+    else if (!value.split('@')[1].match(/^[^.]*\.[^.]{2,3}(?:\.[^.]{2,3})?$/)) {
+        valid_fields['email'] = false;
+        error_text('email', "Please check the end of your email");
+    }
+    // valid
     else {
-        let chunks = value.split('@');
-        let username = chunks[0];
-        let domain = chunks[1];
-        // username
-        if (!username.match(/[A-Za-z0-9]+$/)) {
-            valid_fields['email'] = false;
-            error_text('email', "Please check the first part of your email");
-        }
-        // domain
-        // https://stackoverflow.com/questions/21173734/extracting-top-level-and-second-level-domain-from-a-url-using-regex
-        else if (!domain.match(/[^.]*\.[^.]{2,3}(?:\.[^.]{2,3})?$/)) {
-            valid_fields['email'] = false;
-            error_text('email', "Please check the second part of your email");
-        }
-        // valid
-        else {
-            valid_fields['email'] = true;
-            error_text('email', "");
-        }
+        valid_fields['email'] = true;
+        error_text('email', "");
     }
 }
 
 function validate_text(field) {
     value = $(`#${field}`).val();
-    // check for any data
+    // empty
     if (value == "") {
         valid_fields[field] = false;
         error_text(field, "Please complete this field");
     }
-    // check for special characters
-    else if (!value.match(/[A-Za-z0-9 _\-.,!?"'()\r\n]*/)) {
+    // whitespace at the start
+    else if (value.match(/^\s.*$/mg)) {
+        valid_fields[field] = false;
+        error_text(field, "Please start with letters or numbers");
+    }
+    // special characters
+    else if (!value.match(/^[A-Za-z0-9 _\-.,!?"'()\r\n]*$/mg)) {
         valid_fields[field] = false;
         error_text(field, "No special characters");
     }
@@ -107,6 +115,12 @@ function validate_text(field) {
  * @returns boolean
  */
 function validate_form() {
+    validate_name('fname');
+    validate_name('sname');
+    validate_email();
+    validate_text('subject');
+    validate_text('message');
+
     let sent = true;
     // iterate over array
     Object.keys(valid_fields).forEach(function (key) {
@@ -114,12 +128,6 @@ function validate_form() {
             sent = false;
         }
     });
-
-    if (!sent) {
-        alert("Please check your info again");
-
-    }
-
     return sent;
 }
 
